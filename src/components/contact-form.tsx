@@ -23,7 +23,6 @@ export function ContactForm() {
   const [error, setError] = useState<string | null>(null);
   const [redirectTo, setRedirectTo] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
-  const fromNameRef = useRef<HTMLInputElement>(null);
   const replyToRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
 
@@ -50,13 +49,16 @@ export function ContactForm() {
   }) {
     if (!web3Key) return null;
 
+    // from_name = brand (Gmail "From" row). Visitor stays in subject/body only.
+    // Intro wrapper ("A new form has been submitted…") is a Web3Forms Pro setting —
+    // free plan cannot remove it via API (docs: Intro Text = paid).
     const payloadBody = {
       access_key: web3Key,
       name: payload.name,
       email: payload.email,
       message: payload.message,
-      subject: `${payload.name} — ${payload.email}`,
-      from_name: payload.name,
+      subject: `${payload.name} · ${payload.email}`,
+      from_name: "Automated Zone",
       replyto: payload.email,
     };
 
@@ -150,10 +152,10 @@ export function ContactForm() {
       form.reset();
     } catch {
       if (web3Key && formRef.current) {
-        if (fromNameRef.current) fromNameRef.current.value = name;
+        // Keep from_name as Automated Zone (hidden input); only stamp reply/subject.
         if (replyToRef.current) replyToRef.current.value = email;
         if (subjectRef.current) {
-          subjectRef.current.value = `${name} — ${email}`;
+          subjectRef.current.value = `${name} · ${email}`;
         }
         formRef.current.submit();
         return;
@@ -199,14 +201,9 @@ export function ContactForm() {
             ref={subjectRef}
             type="hidden"
             name="subject"
-            defaultValue="Automated Zone contact"
+            defaultValue="New contact"
           />
-          <input
-            ref={fromNameRef}
-            type="hidden"
-            name="from_name"
-            defaultValue="Visitor"
-          />
+          <input type="hidden" name="from_name" value="Automated Zone" readOnly />
           <input ref={replyToRef} type="hidden" name="replyto" defaultValue="" />
           {redirectTo ? (
             <input type="hidden" name="redirect" value={redirectTo} />
