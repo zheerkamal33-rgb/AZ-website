@@ -9,6 +9,12 @@ import { Textarea } from "@/components/ui/textarea";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+const fieldClass =
+  "h-12 rounded-none border-0 border-b border-white/20 bg-transparent px-0 text-base text-white shadow-none placeholder:text-white/35 focus-visible:border-teal focus-visible:ring-0 focus-visible:ring-offset-0 disabled:bg-transparent md:text-base";
+
+const areaClass =
+  "min-h-32 rounded-none border-0 border-b border-white/20 bg-transparent px-0 text-base text-white shadow-none placeholder:text-white/35 focus-visible:border-teal focus-visible:ring-0 focus-visible:ring-offset-0 disabled:bg-transparent md:text-base";
+
 export function ContactForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
@@ -44,42 +50,50 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div
-        className="rounded-md border border-teal/40 bg-teal/10 px-5 py-8"
-        role="status"
-      >
-        <p className="font-display text-lg font-semibold text-ink">
+      <div className="az-contact-success py-2" role="status">
+        <p className="font-display text-2xl font-semibold tracking-tight text-teal sm:text-3xl">
           {t.formSuccessTitle}
         </p>
-        <p className="mt-2 text-sm text-muted-foreground">{t.formSuccessBody}</p>
-        <Button
+        <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60 sm:text-base">
+          {t.formSuccessBody}
+        </p>
+        <button
           type="button"
-          variant="outline"
-          className="mt-6"
+          className="az-cta mt-8 inline-flex h-11 items-center border-b border-teal/60 text-sm font-medium text-teal transition-colors hover:border-teal hover:text-white"
           onClick={() => setStatus("idle")}
         >
           {t.formAnother}
-        </Button>
+        </button>
       </div>
     );
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5" noValidate>
+    <form onSubmit={onSubmit} className="az-contact-form space-y-8" noValidate>
       <div className="space-y-2">
-        <Label htmlFor="name">{t.formName}</Label>
+        <Label
+          htmlFor="name"
+          className="text-xs font-medium tracking-wide text-white/50 uppercase"
+        >
+          {t.formName}
+        </Label>
         <Input
           id="name"
           name="name"
           autoComplete="name"
           placeholder={t.formNamePh}
           disabled={status === "loading"}
-          className="h-11 bg-white"
+          className={fieldClass}
           aria-invalid={status === "error" && !!error}
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="email">{t.formEmail}</Label>
+        <Label
+          htmlFor="email"
+          className="text-xs font-medium tracking-wide text-white/50 uppercase"
+        >
+          {t.formEmail}
+        </Label>
         <Input
           id="email"
           name="email"
@@ -87,39 +101,44 @@ export function ContactForm() {
           autoComplete="email"
           placeholder={t.formEmailPh}
           disabled={status === "loading"}
-          className="az-latin h-11 bg-white"
+          className={`az-latin ${fieldClass}`}
           dir="ltr"
           lang="en"
           aria-invalid={status === "error" && !!error}
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message">{t.formMessage}</Label>
+        <Label
+          htmlFor="message"
+          className="text-xs font-medium tracking-wide text-white/50 uppercase"
+        >
+          {t.formMessage}
+        </Label>
         <Textarea
           id="message"
           name="message"
           rows={5}
           placeholder={t.formMessagePh}
           disabled={status === "loading"}
-          className="min-h-28 bg-white"
+          className={areaClass}
           aria-invalid={status === "error" && !!error}
         />
       </div>
 
       {status === "error" && error && (
-        <p className="text-sm text-destructive" role="alert">
+        <p className="text-sm text-red-300" role="alert">
           {error}
         </p>
       )}
 
       {status === "idle" && (
-        <p className="text-sm text-muted-foreground">{t.formHint}</p>
+        <p className="text-sm text-white/45">{t.formHint}</p>
       )}
 
       <Button
         type="submit"
         disabled={status === "loading"}
-        className="az-cta h-11 bg-ink px-6 text-mist hover:bg-ink-soft"
+        className="az-cta h-12 rounded-md bg-teal px-8 text-sm font-semibold text-ink hover:bg-teal-deep disabled:opacity-60"
       >
         {status === "loading" ? t.formSending : t.formSubmit}
       </Button>

@@ -183,7 +183,7 @@ export const messages: Record<Lang, Messages> = {
     formErrorEmail: "Enter a valid email so we can get back to you.",
     formSuccessTitle: "Thanks — we got it.",
     formSuccessBody:
-      "Zheer or Armand will follow up shortly. Prefer a call? Use the numbers on the left.",
+      "Zheer or Armand will follow up shortly. Prefer a call? Use the numbers on this page.",
     formAnother: "Send another message",
 
     footerBlurb:

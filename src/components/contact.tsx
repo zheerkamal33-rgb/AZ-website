@@ -13,36 +13,51 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+    <section
+      id="contact"
+      className="az-contact relative overflow-hidden bg-ink py-24 text-white sm:py-32"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.22] az-grid"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-teal/20 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#3b82a0]/15 blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="grid gap-16 lg:grid-cols-[1fr_1.05fr] lg:gap-20 lg:items-start">
           <Reveal>
-            <p className="text-sm font-medium tracking-wide text-teal-deep uppercase">
+            <p className="text-sm font-medium tracking-wide text-teal uppercase">
               {t.contactEyebrow}
             </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+            <h2 className="mt-3 max-w-lg font-display text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
               {t.contactTitle}
             </h2>
-            <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="mt-5 max-w-md text-base leading-relaxed text-white/60 sm:text-lg">
               {t.contactBody}
             </p>
 
-            <ul className="mt-10 space-y-5">
+            <ul className="mt-12 space-y-0 divide-y divide-white/10 border-y border-white/10">
               {phones.map((p) => (
                 <li key={p.number}>
-                  <p
-                    lang="en"
-                    className="az-latin text-sm text-muted-foreground"
-                  >
-                    {p.name}
-                  </p>
                   <a
                     href={`tel:+1${p.number}`}
-                    className="az-latin az-cta mt-1 inline-block font-display text-xl font-semibold text-ink underline-offset-4 hover:text-teal-deep hover:underline"
+                    className="az-phone-link group flex items-baseline justify-between gap-4 py-5 transition-colors"
                     dir="ltr"
                     lang="en"
                   >
-                    {p.display}
+                    <span className="az-latin shrink-0 text-sm text-white/45 transition-colors group-hover:text-teal">
+                      {p.name}
+                    </span>
+                    <span className="az-latin az-cta font-display text-xl font-semibold tracking-tight text-white transition-colors group-hover:text-teal sm:text-2xl md:text-3xl">
+                      {p.display}
+                    </span>
                   </a>
                 </li>
               ))}
@@ -50,7 +65,9 @@ export function Contact() {
           </Reveal>
 
           <Reveal delayMs={100}>
-            <ContactForm />
+            <div className="lg:pt-10">
+              <ContactForm />
+            </div>
           </Reveal>
         </div>
       </div>
