@@ -54,6 +54,8 @@ export type Messages = {
   uniBody: string;
 
   gameEyebrow: string;
+  gameTitle: string;
+  gameProjectName: string;
   gameBody: string;
   gameCta: string;
 
@@ -160,8 +162,10 @@ export const messages: Record<Lang, Messages> = {
       "For our Computer Science degree we built a full smart-house prototype — gas detection, RFID access, an LCD status display, and sensors on a microcontroller. Not a breadboard demo. A complete model we showed at the CS exhibition.",
 
     gameEyebrow: "Also, for fun",
+    gameTitle: "Something we built just to play.",
+    gameProjectName: "Pattern Memory Game",
     gameBody:
-      "We made a little browser game when we felt like building something just to play. No brief. No client. Just for fun.",
+      "A little browser game for remembering light-up patterns. No brief, no client — we made it when we felt like building something fun. Try the light, red, and purple themes.",
     gameCta: "Play the game",
 
     capsEyebrow: "What we do",
@@ -278,8 +282,10 @@ export const messages: Record<Lang, Messages> = {
       "بۆ خوێندنی زانستی کۆمپیوتەر مۆدێلی تەواوی ماڵێکی زیرەکمان دروست کرد — دۆزینەوەی گاز، دەروازەی RFID، شاشەی LCD بۆ دۆخ، و هەستەوەر لەسەر مایکرۆکۆنترۆڵەر. نەک نموونەی بۆردی تاقیکردنەوە. مۆدێلێکی تەواو کە لە پێشانگای زانستی کۆمپیوتەر پیشانمان دا.",
 
     gameEyebrow: "هەروەها، بۆ خۆشی",
+    gameTitle: "شتێک کە تەنها بۆ یاریکردن دروستمان کرد.",
+    gameProjectName: "Pattern Memory Game",
     gameBody:
-      "یارییەکی بچووکی وێبمان دروست کرد کاتێک حەزمان لێ بوو شتێک تەنها بۆ یاریکردن دروست بکەین. بێ داواکاری. بێ کڕیار. تەنها بۆ خۆشی.",
+      "یارییەکی بچووکی وێب بۆ لەبیرکردنی نەخشی ڕووناکی. بێ داواکاری، بێ کڕیار — دروستمان کرد کاتێک حەزمان لێ بوو شتێکی خۆش دروست بکەین. تێمەی سپی، سور و مۆر تاقی بکەرەوە.",
     gameCta: "یاری بکە",
 
     capsEyebrow: "چی دەکەین",

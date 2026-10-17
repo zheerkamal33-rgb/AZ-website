@@ -10,7 +10,7 @@ export function UniBuild() {
   return (
     <section
       id="uni"
-      className="az-cv relative overflow-hidden border-y border-slate-line bg-mist py-24 sm:py-32"
+      className="az-cv relative overflow-hidden border-b border-slate-line bg-mist py-24 sm:py-32"
     >
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">

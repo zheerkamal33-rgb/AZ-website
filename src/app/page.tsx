@@ -16,8 +16,8 @@ export default function Home() {
         <Hero />
         <SelectedWork />
         <Capabilities />
-        <UniBuild />
         <ForFun />
+        <UniBuild />
         <About />
         <Contact />
       </main>
