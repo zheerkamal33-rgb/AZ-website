@@ -87,8 +87,9 @@ export function ContactForm() {
           autoComplete="email"
           placeholder={t.formEmailPh}
           disabled={status === "loading"}
-          className="h-11 bg-white"
+          className="az-latin h-11 bg-white"
           dir="ltr"
+          lang="en"
           aria-invalid={status === "error" && !!error}
         />
       </div>

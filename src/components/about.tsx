@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/language-provider";
+import { LatinText } from "@/components/latin-text";
 import { Reveal } from "@/components/reveal";
 
 export function About() {
@@ -18,14 +19,17 @@ export function About() {
               {t.aboutTitle}
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              {t.aboutBody}
+              <LatinText text={t.aboutBody} />
             </p>
           </Reveal>
 
           <Reveal delayMs={120}>
             <div className="az-rtl-border space-y-8 border-l-2 border-teal pl-6">
               <div>
-                <h3 className="font-display text-lg font-semibold text-ink">
+                <h3
+                  lang="en"
+                  className="az-latin font-display text-lg font-semibold text-ink"
+                >
                   Zheer
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
@@ -33,7 +37,10 @@ export function About() {
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-lg font-semibold text-ink">
+                <h3
+                  lang="en"
+                  className="az-latin font-display text-lg font-semibold text-ink"
+                >
                   Armand
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">

@@ -30,11 +30,17 @@ export function Contact() {
             <ul className="mt-10 space-y-5">
               {phones.map((p) => (
                 <li key={p.number}>
-                  <p className="text-sm text-muted-foreground">{p.name}</p>
+                  <p
+                    lang="en"
+                    className="az-latin text-sm text-muted-foreground"
+                  >
+                    {p.name}
+                  </p>
                   <a
                     href={`tel:+1${p.number}`}
-                    className="az-cta mt-1 inline-block font-display text-xl font-semibold text-ink underline-offset-4 hover:text-teal-deep hover:underline"
+                    className="az-latin az-cta mt-1 inline-block font-display text-xl font-semibold text-ink underline-offset-4 hover:text-teal-deep hover:underline"
                     dir="ltr"
+                    lang="en"
                   >
                     {p.display}
                   </a>

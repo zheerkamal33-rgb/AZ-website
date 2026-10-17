@@ -20,7 +20,10 @@ export function Hero() {
       />
 
       <div className="relative z-[1] mx-auto w-full max-w-6xl px-5 pb-20 pt-32 sm:px-8 sm:pb-28">
-        <p className="az-hero-enter font-display text-4xl font-semibold tracking-tight text-teal sm:text-5xl md:text-6xl lg:text-7xl">
+        <p
+          lang="en"
+          className="az-latin az-hero-enter font-display text-4xl font-semibold tracking-tight text-teal sm:text-5xl md:text-6xl lg:text-7xl"
+        >
           {t.brand}
         </p>
         <h1 className="az-hero-enter az-hero-enter-delay-1 mt-6 max-w-3xl font-display text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">

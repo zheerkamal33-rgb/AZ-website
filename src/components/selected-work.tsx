@@ -8,6 +8,7 @@ import {
   TabletFrame,
 } from "@/components/device-frames";
 import { useLanguage } from "@/components/language-provider";
+import { LatinText } from "@/components/latin-text";
 import { Reveal } from "@/components/reveal";
 
 export function SelectedWork() {
@@ -116,7 +117,7 @@ export function SelectedWork() {
 
             <Reveal delayMs={80} className="order-1 lg:order-2">
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                {t.cashierEyebrow}
+                <LatinText text={t.cashierEyebrow} />
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                 {t.cashierTitle}
@@ -131,7 +132,7 @@ export function SelectedWork() {
                 <span className="font-medium text-white">
                   {t.cashierBuiltLabel}
                 </span>
-                {t.cashierBuilt}
+                <LatinText text={t.cashierBuilt} />
               </p>
             </Reveal>
           </div>

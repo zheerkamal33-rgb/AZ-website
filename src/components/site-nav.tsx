@@ -60,15 +60,16 @@ export function SiteNav() {
           </ul>
 
           <div
-            className="relative z-10 flex items-center rounded-md border border-white/15 bg-white/5 p-0.5 text-xs font-semibold tracking-wide"
+            className="az-latin relative z-10 flex items-center rounded-md border border-white/15 bg-white/5 p-0.5 text-xs font-semibold tracking-wide"
             role="group"
             aria-label="Language"
+            lang="en"
           >
             <button
               type="button"
               data-set-lang="en"
               className={cn(
-                "relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
+                "az-latin relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
                 lang === "en"
                   ? "bg-teal text-ink"
                   : "text-white/65 hover:text-white"
@@ -82,7 +83,7 @@ export function SiteNav() {
               type="button"
               data-set-lang="ku"
               className={cn(
-                "relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
+                "az-latin relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
                 lang === "ku"
                   ? "bg-teal text-ink"
                   : "text-white/65 hover:text-white"
@@ -104,25 +105,11 @@ export function SiteNav() {
             onClick={() => setOpen((v) => !v)}
           >
             <span className="sr-only">Menu</span>
-            <span className="pointer-events-none flex flex-col gap-1.5">
-              <span
-                className={cn(
-                  "az-burger-1 block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
-                  open && "translate-y-[5px] rotate-45"
-                )}
-              />
-              <span
-                className={cn(
-                  "az-burger-2 block h-0.5 w-5 bg-white transition-opacity duration-200",
-                  open && "opacity-0"
-                )}
-              />
-              <span
-                className={cn(
-                  "az-burger-3 block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
-                  open && "-translate-y-[5px] -rotate-45"
-                )}
-              />
+            {/* CSS .az-menu-open morphs lines → X (synced with drawer) */}
+            <span className="pointer-events-none flex flex-col gap-1.5" aria-hidden>
+              <span className="az-burger-1 block h-0.5 w-5 origin-center bg-white" />
+              <span className="az-burger-2 block h-0.5 w-5 origin-center bg-white" />
+              <span className="az-burger-3 block h-0.5 w-5 origin-center bg-white" />
             </span>
           </button>
         </div>
@@ -130,10 +117,8 @@ export function SiteNav() {
 
       <div
         id="mobile-nav-panel"
-        className={cn(
-          "pointer-events-auto relative z-10 border-t border-white/10 bg-ink md:hidden",
-          open ? "block" : "hidden"
-        )}
+        className="pointer-events-auto relative z-10 border-t border-white/10 bg-ink md:hidden"
+        aria-hidden={!open}
       >
         <ul className="flex flex-col px-5 py-4">
           {links.map((link) => (
@@ -141,6 +126,7 @@ export function SiteNav() {
               <a
                 href={link.href}
                 className="block py-3 text-base text-white/85 touch-manipulation"
+                tabIndex={open ? 0 : -1}
                 onClick={() => setOpen(false)}
               >
                 {link.label}
