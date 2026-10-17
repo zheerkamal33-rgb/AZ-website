@@ -1,8 +1,7 @@
-"use client";
-
-import { useEffect, useRef, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+/** Always-visible reveal wrapper — no IntersectionObserver / no client JS */
 export function Reveal({
   children,
   className,
@@ -12,18 +11,8 @@ export function Reveal({
   className?: string;
   delayMs?: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    // Always show immediately — do not gate on IntersectionObserver
-    el.classList.add("is-visible");
-  }, []);
-
   return (
     <div
-      ref={ref}
       className={cn("az-reveal is-visible", className)}
       style={delayMs ? { transitionDelay: `${delayMs}ms` } : undefined}
     >

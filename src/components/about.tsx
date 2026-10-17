@@ -7,7 +7,7 @@ export function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="bg-mist py-24 sm:py-32">
+    <section id="about" className="az-cv bg-mist py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-20">
           <Reveal>

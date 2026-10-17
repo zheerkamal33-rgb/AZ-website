@@ -13,7 +13,7 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="bg-white py-24 sm:py-32">
+    <section id="contact" className="az-cv bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal>

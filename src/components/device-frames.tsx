@@ -29,8 +29,10 @@ export function PhoneFrame({
             alt={alt}
             fill
             sizes="(max-width: 768px) 42vw, 240px"
+            quality={90}
             className="object-cover object-top"
             priority={priority}
+            loading={priority ? undefined : "lazy"}
           />
         </div>
       </div>
@@ -62,6 +64,7 @@ export function TabletFrame({
             quality={95}
             className="object-cover object-top"
             priority={priority}
+            loading={priority ? undefined : "lazy"}
           />
         </div>
       </div>
@@ -102,6 +105,7 @@ export function MonitorFrame({
             quality={95}
             className="object-cover object-top"
             priority={priority}
+            loading={priority ? undefined : "lazy"}
           />
         </div>
       </div>
@@ -242,6 +246,7 @@ export function LaptopFrame({
             quality={95}
             className="object-cover object-top"
             priority={priority}
+            loading={priority ? undefined : "lazy"}
           />
         </div>
       </div>

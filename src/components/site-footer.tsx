@@ -6,7 +6,7 @@ export function SiteFooter() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-white/10 bg-ink text-white">
+    <footer className="az-cv border-t border-white/10 bg-ink text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-end sm:justify-between sm:px-8">
         <div>
           <p className="font-display text-lg font-semibold">{t.brand}</p>

@@ -188,11 +188,17 @@
   }
 
   .az-cta:hover {
-    transform: translateY(-1px);
+    transform: translate3d(0, -1px, 0);
   }
 
   .az-cta:active {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .az-float,
+  .az-float-slow {
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .az-float {
@@ -204,24 +210,30 @@
     animation-delay: -1.5s;
   }
 
+  /* Skip offscreen paint for below-fold sections — same visual, less work */
+  .az-cv {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 720px;
+  }
+
   @keyframes az-rise {
     from {
       opacity: 0;
-      transform: translateY(22px);
+      transform: translate3d(0, 22px, 0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
     }
   }
 
   @keyframes az-float {
     0%,
     100% {
-      translate: 0 0;
+      transform: translate3d(0, 0, 0);
     }
     50% {
-      translate: 0 -8px;
+      transform: translate3d(0, -8px, 0);
     }
   }
 
@@ -244,6 +256,7 @@
     .az-float,
     .az-float-slow {
       animation: none;
+      transform: none;
     }
   }
 }
