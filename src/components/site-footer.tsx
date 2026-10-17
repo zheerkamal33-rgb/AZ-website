@@ -26,16 +26,16 @@ export function SiteFooter() {
           lang="en"
         >
           <a
-            href="tel:+17741197770"
-            className="az-latin text-ink/70 transition-colors hover:text-teal-deep"
+            href="mailto:zheerkamal33@gmail.com"
+            className="az-latin text-ink/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
           >
-            Zheer — 774-119-7770
+            Zheer — zheerkamal33@gmail.com
           </a>
           <a
-            href="tel:+17708912007"
-            className="az-latin text-ink/70 transition-colors hover:text-teal-deep"
+            href="mailto:armandsoran1@gmail.com"
+            className="az-latin text-ink/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
           >
-            Armand — 770-891-2007
+            Armand — armandsoran1@gmail.com
           </a>
         </div>
       </div>

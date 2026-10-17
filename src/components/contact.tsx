@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/contact-form";
 import { useLanguage } from "@/components/language-provider";
 import { Reveal } from "@/components/reveal";
 
-const phones = [
-  { name: "Zheer", number: "7741197770", display: "774-119-7770" },
-  { name: "Armand", number: "7708912007", display: "770-891-2007" },
+const emails = [
+  { name: "Zheer", email: "zheerkamal33@gmail.com" },
+  { name: "Armand", email: "armandsoran1@gmail.com" },
 ];
 
 export function Contact() {
@@ -44,19 +44,19 @@ export function Contact() {
             </p>
 
             <ul className="mt-12 space-y-0 divide-y divide-white/10 border-y border-white/10">
-              {phones.map((p) => (
-                <li key={p.number}>
+              {emails.map((p) => (
+                <li key={p.email}>
                   <a
-                    href={`tel:+1${p.number}`}
-                    className="az-phone-link group flex items-baseline justify-between gap-4 py-5 transition-colors"
+                    href={`mailto:${p.email}`}
+                    className="az-contact-link group flex flex-col gap-1 py-5 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     dir="ltr"
                     lang="en"
                   >
                     <span className="az-latin shrink-0 text-sm text-white/45 transition-colors group-hover:text-teal">
                       {p.name}
                     </span>
-                    <span className="az-latin az-cta font-display text-xl font-semibold tracking-tight text-white transition-colors group-hover:text-teal sm:text-2xl md:text-3xl">
-                      {p.display}
+                    <span className="az-latin az-cta font-display text-base font-semibold tracking-tight text-white transition-colors group-hover:text-teal sm:text-lg md:text-xl break-all sm:break-normal sm:text-end">
+                      {p.email}
                     </span>
                   </a>
                 </li>

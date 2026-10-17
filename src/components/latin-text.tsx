@@ -42,7 +42,7 @@ export function LatinText({
   );
 }
 
-/** Always-English inline span (names, phones, EN|KU, brand bits). */
+/** Always-English inline span (names, emails, EN|KU, brand bits). */
 export function Latin({
   children,
   className,

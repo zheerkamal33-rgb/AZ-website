@@ -100,7 +100,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "Could not send the message. Please try again or call us.",
+        error: "Could not send the message. Please try again or email us.",
         code: "send_failed",
       },
       { status: 502 },

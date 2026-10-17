@@ -51,12 +51,12 @@ export type Messages = {
   capsEyebrow: string;
   capsTitle: string;
   capsIntro: string;
-  capsDeliveryTitle: string;
-  capsDeliveryBody: string;
-  capsPosTitle: string;
-  capsPosBody: string;
-  capsCraftTitle: string;
-  capsCraftBody: string;
+  capsWebTitle: string;
+  capsWebBody: string;
+  capsAppsTitle: string;
+  capsAppsBody: string;
+  capsSystemsTitle: string;
+  capsSystemsBody: string;
 
   aboutEyebrow: string;
   aboutTitle: string;
@@ -97,16 +97,16 @@ export const messages: Record<Lang, Messages> = {
     closeMenu: "Close menu",
     brand: "Automated Zone",
 
-    heroHeadline: "CS grads who ship delivery platforms and market POS.",
+    heroHeadline: "CS students who build websites, apps, and systems.",
     heroBody:
-      "Automated Zone is Zheer and Armand. We design and build production software for operators on the ground — then stand behind how it looks and how it runs. Browse the work, then say hello.",
-    heroCtaWork: "View selected work",
-    heroCtaContact: "Get in touch",
+      "Automated Zone is Zheer and Armand. We design and build software for whoever needs it — websites, apps, systems, the whole range. Have a look at some of our work, then say hello.",
+    heroCtaWork: "See our work",
+    heroCtaContact: "Say hello",
 
     workEyebrow: "Work",
-    workTitle: "Selected projects",
+    workTitle: "Some projects of ours",
     workIntro:
-      "Production systems we designed and shipped — delivery, market POS, cafe menus, and pharmacy ops.",
+      "A handful of things we've built and put into use — delivery, market POS, cafe menus, and pharmacy tools.",
 
     deliveryEyebrow: "Two-sided delivery platform",
     deliveryTitle: "Delivery operations app",
@@ -144,33 +144,33 @@ export const messages: Record<Lang, Messages> = {
     pharmacyBuilt:
       "A clinical dispense console: Rx queue with lot/expiry checks, stock watchlists, and counter workflows shaped for pharmacy staff.",
 
-    capsEyebrow: "Capabilities",
-    capsTitle: "What we're known for.",
+    capsEyebrow: "What we do",
+    capsTitle: "Websites, apps, and systems — for anyone.",
     capsIntro:
-      "Production software for operators — sharp UX, solid engineering, direct founders.",
-    capsDeliveryTitle: "Delivery platforms",
-    capsDeliveryBody:
-      "Two-sided ops — merchants create orders, riders pick up and deliver, customers receive. Built for real street-level coordination.",
-    capsPosTitle: "Market POS",
-    capsPosBody:
-      "Cashier systems for markets — fast checkout, multi-currency, product catalogs, and sales analysis that belongs on the counter.",
-    capsCraftTitle: "End-to-end craft",
-    capsCraftBody:
-      "From interface to architecture. We design, build, and ship — then stand behind how it looks and how it runs.",
+      "Tell us what you need. We build digital things that help people and businesses get work done — clear, careful, and made to last.",
+    capsWebTitle: "Websites",
+    capsWebBody:
+      "Sites that look good and work well — for a shop, a studio, a team, or a personal project. Fast, clear, and easy to keep up to date.",
+    capsAppsTitle: "Apps",
+    capsAppsBody:
+      "Mobile and web apps shaped around how you actually work. We keep the interface simple so people want to use it.",
+    capsSystemsTitle: "Custom systems",
+    capsSystemsBody:
+      "If off-the-shelf tools don't fit, we can build something that does — checkout, ops tools, internal dashboards, whatever the job needs.",
 
     aboutEyebrow: "About",
-    aboutTitle: "Sharp young builders. Shipped systems.",
+    aboutTitle: "Two CS students. Real software.",
     aboutBody:
-      "Zheer and Armand are computer science graduates who founded Automated Zone to build software operators actually use — a two-sided delivery platform and AZ Market Cashier. Not pitch-deck prototypes. Production apps with clear UX and solid engineering, from two people you can call directly.",
+      "Zheer and Armand are computer science students who started Automated Zone to build software people actually use. We take on websites, apps, and systems for whoever needs them — and we've already put real projects out into the world. Reach us by email; we're the ones doing the work.",
     aboutZheerRole:
-      "Co-founder, CS — systems thinking, product sense, and an obsession with getting the operational details right.",
+      "Co-founder, CS student — likes systems thinking and getting the little operational details right.",
     aboutArmandRole:
-      "Co-founder, CS — craft on the surface, rigor underneath. Builds interfaces people trust on the first try.",
+      "Co-founder, CS student — cares about how things look and how solid they feel underneath.",
 
     contactEyebrow: "Contact",
-    contactTitle: "Talk to us directly.",
+    contactTitle: "Say hello.",
     contactBody:
-      "Call either founder, or send a short note. We keep the line short on purpose — you reach the people who do the work.",
+      "Email either of us, or send a short note with the form. We read everything ourselves.",
     formName: "Name",
     formEmail: "Email",
     formMessage: "Message",
@@ -183,14 +183,14 @@ export const messages: Record<Lang, Messages> = {
     formErrorRequired: "Please fill in your name, email, and message.",
     formErrorEmail: "Enter a valid email so we can get back to you.",
     formErrorSend:
-      "Could not send the message. Please try again or call us directly.",
+      "Could not send the message. Please try again or email us directly.",
     formSuccessTitle: "Thanks — we got it.",
     formSuccessBody:
-      "Zheer or Armand will follow up shortly at automated.zoneaz@gmail.com. Prefer a call? Use the numbers on this page.",
+      "Zheer or Armand will follow up shortly. You can also email either of us using the addresses on this page.",
     formAnother: "Send another message",
 
     footerBlurb:
-      "Studio of Zheer & Armand — CS graduates shipping delivery platforms and market POS.",
+      "Zheer & Armand — CS students building websites, apps, and systems.",
     footerCopy: "© 2026 Automated Zone. Built by Zheer & Armand.",
   },
 
@@ -204,16 +204,16 @@ export const messages: Record<Lang, Messages> = {
     brand: "Automated Zone",
 
     heroHeadline:
-      "دەرچووی کۆمپیوتەر کە پلاتفۆرمی گەیاندن و سیستەمی فرۆشتنی بازاڕ دەنێرنە دەرەوە.",
+      "خوێندکاری زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
     heroBody:
-      "Automated Zone بریتییە لە Zheer و Armand. نەرمەکاڵای کارکردن بۆ ئەو کەسانە دیزاین دەکەین و دروستی دەکەین کە ڕۆژانە لەسەر زەوی کاری پێ دەکەن — هەم شێوەکەی و هەم کارکردنەکەی بەرپرسیارین لێی. کارەکان ببینە، پاشان پەیوەندیمان پێوە بکە.",
+      "Automated Zone بریتییە لە Zheer و Armand. نەرمەکاڵا دیزاین دەکەین و دروست دەکەین بۆ هەر کەسێک کە پێویستی پێیە — وێبسایت، ئەپ، سیستەم، هەموو جۆرێک. چەند کارێکمان ببینە، پاشان سڵاو بڵێ.",
     heroCtaWork: "بینینی کارەکان",
-    heroCtaContact: "پەیوەندیمان پێوە بکە",
+    heroCtaContact: "سڵاو بڵێ",
 
     workEyebrow: "کارەکان",
-    workTitle: "پڕۆژە هەڵبژێردراوەکان",
+    workTitle: "هەندێک لە پڕۆژەکانمان",
     workIntro:
-      "سیستەمی ڕاستەقینە کە دیزاینمان کردوون و ناردووماننە دەرەوە — گەیاندن، سیستەمی فرۆشتنی بازاڕ، مێنیوی کافێ، و کارەکانی دەرمانخانە.",
+      "چەند شتێک کە دروستمان کردوون و خەڵک بەکاریان دەهێنن — گەیاندن، سیستەمی فرۆشتنی بازاڕ، مێنیوی کافێ، و ئامرازی دەرمانخانە.",
 
     deliveryEyebrow: "پلاتفۆرمی گەیاندنی دوو لایەنە",
     deliveryTitle: "ئەپی کارەکانی گەیاندن",
@@ -251,33 +251,33 @@ export const messages: Record<Lang, Messages> = {
     pharmacyBuilt:
       "کۆنسۆڵی دابەشکردنی کلینیکی: ڕیزی ڕەچەتە لەگەڵ پشکنینی لۆت و بەسەرچوون، لیستی چاودێری کۆگا، و ڕێڕەوی کار بۆ ستافی دەرمانخانە.",
 
-    capsEyebrow: "تواناکان",
-    capsTitle: "بە چی ناسراوین.",
+    capsEyebrow: "چی دەکەین",
+    capsTitle: "وێبسایت، ئەپ و سیستەم — بۆ هەموو کەس.",
     capsIntro:
-      "نەرمەکاڵای کارکردن بۆ کارپێکەران — ڕووکاری ڕوون، ئەندازیاری پتەو، و دامەزرێنەری ڕاستەوخۆ.",
-    capsDeliveryTitle: "پلاتفۆرمی گەیاندن",
-    capsDeliveryBody:
-      "کارەکانی دوو لایەنە — بازرگان داواکاری دروست دەکات، گەیەنەر وەری دەگرێت و دەیگەیەنێت، کڕیار وەری دەگرێت. بۆ هاوئاهەنگی ڕاستەقینەی سەرشەقام دروستکراوە.",
-    capsPosTitle: "سیستەمی فرۆشتنی بازاڕ",
-    capsPosBody:
-      "سیستەمی کاشێر بۆ بازاڕەکان — وەرگرتنی پارەی خێرا، فرەدراو، کەتەلۆگی بەرهەم، و شیکاری فرۆشتن کە لەسەر کاونتەر جێگای خۆی هەیە.",
-    capsCraftTitle: "لە سەرەتاوە تا کۆتایی",
-    capsCraftBody:
-      "لە ڕووکارەوە تا تەلارسازی. دیزاین دەکەین، دروست دەکەین و دەینێرینە دەرەوە — پاشان بەرپرسیارین لە شێوە و کارکردنەکەی.",
+      "پێمان بڵێ پێویستیت بە چی هەیە. شتی دیجیتاڵی دروست دەکەین کە یارمەتی خەڵک و کاروبار دەدات کارەکانیان بکەن — ڕوون، بە وردی، و بۆ ماوەیەکی درێژ.",
+    capsWebTitle: "وێبسایت",
+    capsWebBody:
+      "وێبسایتێک کە جوان بێت و باش کار بکات — بۆ فرۆشگا، ستۆدیۆ، تیم، یان پڕۆژەی کەسی. خێرا، ڕوون، و ئاسان بۆ نوێکردنەوە.",
+    capsAppsTitle: "ئەپ",
+    capsAppsBody:
+      "ئەپی مۆبایل و وێب کە لەسەر شێوازی کارکردنی تۆ دروستکراوە. ڕووکارەکە سادە دەهێڵینەوە تا خەڵک حەزی لێ بکات.",
+    capsSystemsTitle: "سیستەمی تایبەت",
+    capsSystemsBody:
+      "ئەگەر ئامرازی ئامادەکراو ناگونجێت، دەتوانین شتێک دروست بکەین کە گونجاو بێت — وەرگرتنی پارە، ئامرازی کارەکان، داشبۆردی ناوخۆیی، یان هەر شتێک کە کارەکە پێویستی پێیە.",
 
     aboutEyebrow: "دەربارەمان",
-    aboutTitle: "دروستکەری گەنجی زیرەک. سیستەمی نێردراو.",
+    aboutTitle: "دوو خوێندکاری زانستی کۆمپیوتەر. نەرمەکاڵای ڕاستەقینە.",
     aboutBody:
-      "Zheer و Armand دەرچووی زانستی کۆمپیوتەرن کە Automated Zoneیان دامەزراند بۆ دروستکردنی نەرمەکاڵا کە کارپێکەران بەڕاستی بەکاری دەهێنن — پلاتفۆرمی گەیاندنی دوو لایەنە و AZ Market Cashier. نەک نموونەی پڕۆپۆزەڵ. ئەپی کارکردن لەگەڵ ڕووکاری ڕوون و ئەندازیاری پتەو، لە دوو کەسەوە کە دەتوانیت ڕاستەوخۆ پەیوەندییان پێوە بکەیت.",
+      "Zheer و Armand خوێندکاری زانستی کۆمپیوتەرن کە Automated Zoneیان دەستپێکرد بۆ دروستکردنی نەرمەکاڵا کە خەڵک بەڕاستی بەکاری دەهێنن. وێبسایت، ئەپ و سیستەم بۆ هەر کەسێک دروست دەکەین کە پێویستی پێیە — و پێشتر پڕۆژەی ڕاستەقینەمان ناردووەتە دەرەوە. بە ئیمەیڵ پەیوەندیمان پێوە بکە؛ ئێمە خودی کارەکە دەکەین.",
     aboutZheerRole:
-      "هاودامەزرێنەر، زانستی کۆمپیوتەر — بیرکردنەوەی سیستەمی، هەستی بەرهەم، و گرنگیدان بە وردەکاری کارەکان.",
+      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — حەزی لە بیرکردنەوەی سیستەمی و ڕێکخستنی وردەکاری کارەکانە.",
     aboutArmandRole:
-      "هاودامەزرێنەر، زانستی کۆمپیوتەر — جوانی لە ڕووکار، توندی لە ژێرەوە. ڕووکار دروست دەکات کە خەڵک لە یەکەم هەوڵدا متمانەی پێ دەکەن.",
+      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — گرنگی بە شێوە دەدات و بەوەی لە ژێرەوە پتەو بێت.",
 
     contactEyebrow: "پەیوەندی",
-    contactTitle: "ڕاستەوخۆ قسەمان لەگەڵ بکە.",
+    contactTitle: "سڵاو بڵێ.",
     contactBody:
-      "تەلەفۆن بۆ هەر یەکێک لە دامەزرێنەران بکە، یان نامەیەکی کورت بنێرە. هێڵەکە بەئەنقەست کورت دەهێڵینەوە — دەگەیتە ئەو کەسانەی خودی کارەکە دەکەن.",
+      "ئیمەیڵ بۆ هەر یەکێکمان بنێرە، یان نامەیەکی کورت لە ڕێگەی فۆرمەکەوە بنێرە. هەموو شتێک خۆمان دەیخوێنینەوە.",
     formName: "ناو",
     formEmail: "ئیمەیڵ",
     formMessage: "نامە",
@@ -290,14 +290,14 @@ export const messages: Record<Lang, Messages> = {
     formErrorRequired: "تکایە ناو، ئیمەیڵ و نامە پڕ بکەرەوە.",
     formErrorEmail: "ئیمەیڵێکی دروست بنووسە بۆ ئەوەی بتوانین وەڵامت بدەینەوە.",
     formErrorSend:
-      "نەتوانرا نامەکە بنێردرێت. دووبارە هەوڵبدەرەوە یان تەلەفۆنمان بۆ بکە.",
+      "نەتوانرا نامەکە بنێردرێت. دووبارە هەوڵبدەرەوە یان ڕاستەوخۆ ئیمەیڵمان بۆ بنێرە.",
     formSuccessTitle: "سوپاس — وەرمانگرت.",
     formSuccessBody:
-      "Zheer یان Armand بەم زووانە لە automated.zoneaz@gmail.com وەڵامت دەدەنەوە. تەلەفۆنت پێ باشترە؟ ژمارەکان لەم پەڕەیەدان.",
+      "Zheer یان Armand بەم زووانە وەڵامت دەدەنەوە. دەتوانیت ڕاستەوخۆش ئیمەیڵ بۆ یەکێکمان بنێرە لەم پەڕەیە.",
     formAnother: "نامەیەکی تر بنێرە",
 
     footerBlurb:
-      "ستۆدیۆی Zheer و Armand — دەرچووی کۆمپیوتەر کە پلاتفۆرمی گەیاندن و سیستەمی فرۆشتنی بازاڕ دەنێرنە دەرەوە.",
+      "Zheer و Armand — خوێندکاری زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
     footerCopy: "© 2026 Automated Zone. دروستکراوە لەلایەن Zheer و Armand.",
   },
 };

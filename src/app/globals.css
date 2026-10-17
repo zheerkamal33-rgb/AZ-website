@@ -300,7 +300,7 @@ header.az-menu-open .az-burger-3 {
     animation-delay: 0.36s;
   }
 
-  /* Contact — underline fields + phone row motion */
+  /* Contact — underline fields + email row motion */
   .az-contact-form input:-webkit-autofill,
   .az-contact-form textarea:-webkit-autofill {
     -webkit-text-fill-color: #f3f6f9;
@@ -308,11 +308,11 @@ header.az-menu-open .az-burger-3 {
     transition: background-color 9999s ease-out;
   }
 
-  .az-phone-link {
+  .az-contact-link {
     position: relative;
   }
 
-  .az-phone-link::after {
+  .az-contact-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -325,12 +325,12 @@ header.az-menu-open .az-burger-3 {
     transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  html[dir="rtl"] .az-phone-link::after {
+  html[dir="rtl"] .az-contact-link::after {
     transform-origin: right;
   }
 
-  .az-phone-link:hover::after,
-  .az-phone-link:focus-visible::after {
+  .az-contact-link:hover::after,
+  .az-contact-link:focus-visible::after {
     transform: scaleX(1);
   }
 

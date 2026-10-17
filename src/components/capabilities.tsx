@@ -7,9 +7,9 @@ export function Capabilities() {
   const { t } = useLanguage();
 
   const items = [
-    { title: t.capsDeliveryTitle, body: t.capsDeliveryBody },
-    { title: t.capsPosTitle, body: t.capsPosBody },
-    { title: t.capsCraftTitle, body: t.capsCraftBody },
+    { title: t.capsWebTitle, body: t.capsWebBody },
+    { title: t.capsAppsTitle, body: t.capsAppsBody },
+    { title: t.capsSystemsTitle, body: t.capsSystemsBody },
   ];
 
   return (

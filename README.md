@@ -55,6 +55,6 @@ GMAIL_APP_PASSWORD=your-16-char-app-password
 
 ## Contact
 
-- Zheer — 774-119-7770
-- Armand — 770-891-2007
-- Email — automated.zoneaz@gmail.com
+- Zheer — zheerkamal33@gmail.com
+- Armand — armandsoran1@gmail.com
+- Studio — automated.zoneaz@gmail.com
