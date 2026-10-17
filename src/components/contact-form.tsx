@@ -17,13 +17,9 @@ const areaClass =
 
 const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
 
-function composeBody(name: string, email: string, message: string) {
-  return [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    ``,
-    message,
-  ].join("\n");
+/** Always put visitor identity in the body — Web3Forms templates vary. */
+function composeMessage(name: string, email: string, message: string) {
+  return `Name: ${name}\nEmail: ${email}\n\n${message}`;
 }
 
 export function ContactForm() {
@@ -59,23 +55,33 @@ export function ContactForm() {
   }) {
     if (!web3Key) return null;
 
-    const body = new URLSearchParams({
+    const payloadBody = {
       access_key: web3Key,
-      // Explicit labels Web3Forms shows in the inbox email
-      Name: payload.name,
-      Email: payload.email,
-      Message: composeBody(payload.name, payload.email, payload.message),
-      subject: `Contact from ${payload.name} (${payload.email})`,
+      name: payload.name,
+      email: payload.email,
+      message: composeMessage(payload.name, payload.email, payload.message),
+      subject: `${payload.name} — ${payload.email}`,
       from_name: payload.name,
       replyto: payload.email,
-      botcheck: "false",
-    });
+    };
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body,
-    });
+    let res: Response;
+    try {
+      res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payloadBody),
+      });
+    } catch {
+      res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(payloadBody),
+      });
+    }
 
     const data = (await res.json().catch(() => ({}))) as {
       success?: boolean;
@@ -117,9 +123,10 @@ export function ContactForm() {
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
-    const website = String(data.get("website") ?? "").trim();
+    // Honeypot (renamed — "website" was showing up in Web3Forms emails)
+    const hp = String(data.get("az_hp") ?? "").trim();
 
-    if (website) {
+    if (hp) {
       setStatus("success");
       form.reset();
       return;
@@ -147,17 +154,16 @@ export function ContactForm() {
       setStatus("success");
       form.reset();
     } catch {
-      // Classic POST fallback — stamp name/email into the payload first
       if (web3Key && formRef.current) {
         if (fromNameRef.current) fromNameRef.current.value = name;
         if (replyToRef.current) replyToRef.current.value = email;
         if (subjectRef.current) {
-          subjectRef.current.value = `Contact from ${name} (${email})`;
+          subjectRef.current.value = `${name} — ${email}`;
         }
         const msgEl = formRef.current.elements.namedItem(
           "message",
         ) as HTMLTextAreaElement | null;
-        if (msgEl) msgEl.value = composeBody(name, email, message);
+        if (msgEl) msgEl.value = composeMessage(name, email, message);
         formRef.current.submit();
         return;
       }
@@ -202,13 +208,13 @@ export function ContactForm() {
             ref={subjectRef}
             type="hidden"
             name="subject"
-            defaultValue="Automated Zone contact form"
+            defaultValue="Automated Zone contact"
           />
           <input
             ref={fromNameRef}
             type="hidden"
             name="from_name"
-            defaultValue="Automated Zone visitor"
+            defaultValue="Visitor"
           />
           <input ref={replyToRef} type="hidden" name="replyto" defaultValue="" />
           {redirectTo ? (
@@ -221,10 +227,10 @@ export function ContactForm() {
         className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden"
         aria-hidden="true"
       >
-        <label htmlFor="website">Website</label>
+        <label htmlFor="az_hp">Company</label>
         <input
-          id="website"
-          name="website"
+          id="az_hp"
+          name="az_hp"
           type="text"
           tabIndex={-1}
           autoComplete="off"
