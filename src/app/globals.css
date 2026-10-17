@@ -145,13 +145,32 @@ header.az-menu-open .az-burger-3 {
     font-family: var(--font-display), ui-sans-serif, sans-serif;
   }
 
+  /* Header wordmark — locked Latin metrics in EN and KU (no RTL font swap) */
+  .az-brand {
+    font-family: var(--font-display), ui-sans-serif, sans-serif !important;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 0.025em;
+    white-space: nowrap;
+  }
+
   /* Sorani Kurdish — Arabic-script font + RTL-safe borders */
   html[dir="rtl"] body {
     font-family: var(--font-arabic), var(--font-sans), ui-sans-serif, sans-serif;
   }
 
-  html[dir="rtl"] .font-display {
+  html[dir="rtl"] .font-display:not(.az-brand) {
     font-family: var(--font-arabic), var(--font-display), ui-sans-serif, sans-serif;
+  }
+
+  /* Soft copy fade only — no layout motion on lang switch */
+  main {
+    transition: opacity 0.18s ease;
+  }
+
+  html[data-lang-switching="1"] main {
+    opacity: 0.88;
   }
 
   html[dir="rtl"] .az-rtl-border {

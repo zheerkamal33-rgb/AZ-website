@@ -39,10 +39,10 @@ export function SiteNav() {
       <nav className="pointer-events-auto relative z-10 mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
         <a
           href="#home"
-          className="relative z-10 font-display text-sm font-semibold tracking-wide text-white"
+          className="az-brand relative z-10 text-white"
           onClick={() => setOpen(false)}
         >
-          {t.brand}
+          Automated Zone
         </a>
 
         <div className="relative z-10 flex items-center gap-3 sm:gap-4 md:gap-6">
