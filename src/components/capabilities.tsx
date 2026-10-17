@@ -2,16 +2,16 @@ import { Reveal } from "@/components/reveal";
 
 const items = [
   {
-    title: "Websites",
-    body: "Marketing and portfolio surfaces with strong hierarchy, fast load, and copy that earns trust.",
+    title: "Operational apps",
+    body: "Delivery flows, cashier systems, and day-to-day tools built for merchants, riders, and staff — not demo screens.",
   },
   {
-    title: "Applications",
-    body: "Web apps shaped around real workflows — clean UI, solid architecture, features that earn their place.",
+    title: "Customer-facing surfaces",
+    body: "Digital menus and clear interfaces that look sharp on the floor and stay easy to update.",
   },
   {
-    title: "Systems",
-    body: "Integrations and automation that connect tools so teams spend less time stitching things by hand.",
+    title: "Domain systems",
+    body: "Pharmacy and retail-adjacent software shaped around real inventory, counter work, and reliability.",
   },
 ];
 

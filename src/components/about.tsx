@@ -10,13 +10,14 @@ export function About() {
               About
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-              Automated Zone is Zheer &amp; Armand.
+              Sharp young builders. Shipped systems.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              A small studio with high standards. We care about how software
-              feels on first glance and how it behaves six months later — visual
-              clarity, careful engineering, and direct communication. No agency
-              maze. Two people who design, code, and stand behind the work.
+              Zheer and Armand are computer science graduates who founded
+              Automated Zone to build software that operators actually use —
+              delivery platforms, market POS, cafe menus, pharmacy systems. Not
+              pitch-deck prototypes. Production apps with clear UX and solid
+              engineering, from two people you can call directly.
             </p>
           </Reveal>
 
@@ -27,8 +28,8 @@ export function About() {
                   Zheer
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Co-founder — product sense, systems thinking, and an obsession
-                  with getting the details right.
+                  Co-founder, CS — systems thinking, product sense, and an
+                  obsession with getting the operational details right.
                 </p>
               </div>
               <div>
@@ -36,8 +37,8 @@ export function About() {
                   Armand
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Co-founder — craft on the surface, rigor underneath. Builds
-                  experiences people trust on the first try.
+                  Co-founder, CS — craft on the surface, rigor underneath.
+                  Builds interfaces people trust on the first try.
                 </p>
               </div>
             </div>

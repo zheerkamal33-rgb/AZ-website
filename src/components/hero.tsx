@@ -18,12 +18,12 @@ export function Hero() {
           Automated Zone
         </p>
         <h1 className="az-hero-enter az-hero-enter-delay-1 mt-6 max-w-3xl font-display text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
-          A studio that ships websites, apps, and systems with real craft.
+          CS grads who ship real systems — delivery, POS, menus, pharmacies.
         </h1>
         <p className="az-hero-enter az-hero-enter-delay-2 mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-          We&apos;re Zheer and Armand — two founders who design, build, and deliver
-          software that looks intentional and holds up in production. Browse the
-          work, then say hello.
+          Automated Zone is Zheer and Armand. We design and build production
+          software for operators on the ground — then stand behind how it looks
+          and how it runs. Browse the work, then say hello.
         </p>
         <div className="az-hero-enter az-hero-enter-delay-3 mt-10 flex flex-wrap items-center gap-4">
           <a
