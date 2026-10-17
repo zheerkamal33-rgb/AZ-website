@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,6 +21,24 @@ export function ContactForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  const [redirectTo, setRedirectTo] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    setRedirectTo(`${window.location.origin}/?sent=1#contact`);
+    const q = new URLSearchParams(window.location.search);
+    if (q.get("sent") === "1") {
+      setStatus("success");
+      const url = new URL(window.location.href);
+      url.searchParams.delete("sent");
+      window.history.replaceState(
+        {},
+        "",
+        `${url.pathname}${url.hash || "#contact"}`,
+      );
+    }
+  }, []);
 
   async function sendViaWeb3Forms(payload: {
     name: string;
@@ -28,27 +46,29 @@ export function ContactForm() {
     message: string;
   }) {
     if (!web3Key) return null;
+
+    const body = new URLSearchParams({
+      access_key: web3Key,
+      name: payload.name,
+      email: payload.email,
+      message: payload.message,
+      subject: `Automated Zone contact — ${payload.name}`,
+      from_name: "Automated Zone",
+      replyto: payload.email,
+      botcheck: "false",
+    });
+
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        access_key: web3Key,
-        name: payload.name,
-        email: payload.email,
-        message: payload.message,
-        subject: `Automated Zone contact — ${payload.name}`,
-        from_name: "Automated Zone",
-        replyto: payload.email,
-        botcheck: false,
-      }),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
     });
+
     const data = (await res.json().catch(() => ({}))) as {
       success?: boolean;
       message?: string;
     };
+
     if (!res.ok || !data.success) {
       throw new Error(data.message || t.formErrorSend);
     }
@@ -68,7 +88,6 @@ export function ContactForm() {
     const data = (await res.json().catch(() => ({}))) as {
       ok?: boolean;
       error?: string;
-      code?: string;
     };
     if (!res.ok || !data.ok) {
       throw new Error(data.error || t.formErrorSend);
@@ -114,9 +133,14 @@ export function ContactForm() {
       }
       setStatus("success");
       form.reset();
-    } catch (err) {
+    } catch {
+      // Datacenter / CORS edge cases: fall back to classic browser POST (always delivers).
+      if (web3Key && formRef.current) {
+        formRef.current.submit();
+        return;
+      }
       setStatus("error");
-      setError(err instanceof Error ? err.message : t.formErrorSend);
+      setError(t.formErrorSend);
     }
   }
 
@@ -141,14 +165,44 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="az-contact-form space-y-8" noValidate>
-      {/* Honeypot */}
-      <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+    <form
+      ref={formRef}
+      onSubmit={onSubmit}
+      className="az-contact-form space-y-8"
+      noValidate
+      action={web3Key ? "https://api.web3forms.com/submit" : undefined}
+      method={web3Key ? "POST" : undefined}
+    >
+      {web3Key ? (
+        <>
+          <input type="hidden" name="access_key" value={web3Key} />
+          <input
+            type="hidden"
+            name="subject"
+            value="Automated Zone contact form"
+          />
+          <input type="hidden" name="from_name" value="Automated Zone" />
+          {redirectTo ? (
+            <input type="hidden" name="redirect" value={redirectTo} />
+          ) : null}
+        </>
+      ) : null}
+
+      <div
+        className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden"
+        aria-hidden="true"
+      >
         <label htmlFor="website">Website</label>
         <input
           id="website"
           name="website"
           type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+        <input
+          type="checkbox"
+          name="botcheck"
           tabIndex={-1}
           autoComplete="off"
         />
