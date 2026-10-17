@@ -37,6 +37,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var l=localStorage.getItem('az-lang');if(l==='ku'){var r=document.documentElement;r.lang='ckb';r.dir='rtl';r.dataset.lang='ku';}}catch(e){}})();`,
+          }}
+        />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

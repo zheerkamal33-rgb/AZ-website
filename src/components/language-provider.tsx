@@ -27,7 +27,6 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     try {
@@ -38,7 +37,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     } catch {
       /* ignore */
     }
-    setReady(true);
   }, []);
 
   const setLang = useCallback((next: Lang) => {
@@ -51,12 +49,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (!ready) return;
     const root = document.documentElement;
     root.lang = lang === "ku" ? "ckb" : "en";
     root.dir = lang === "ku" ? "rtl" : "ltr";
     root.dataset.lang = lang;
-  }, [lang, ready]);
+  }, [lang]);
 
   const value = useMemo<LanguageContextValue>(
     () => ({
