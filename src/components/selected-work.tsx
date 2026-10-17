@@ -28,7 +28,7 @@ export function SelectedWork() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-16 bottom-40 h-80 w-80 rounded-full bg-[#3b82a0]/20 blur-3xl"
+        className="pointer-events-none absolute -right-16 bottom-40 h-80 w-80 rounded-full bg-[#c4a35a]/20 blur-3xl"
         aria-hidden
       />
 
@@ -102,7 +102,7 @@ export function SelectedWork() {
             <Reveal className="order-2 lg:order-1">
               <div className="az-stage relative pb-4">
                 <div
-                  className="pointer-events-none absolute -inset-6 rounded-3xl bg-gradient-to-br from-teal/10 via-transparent to-[#3b82a0]/15 blur-xl"
+                  className="pointer-events-none absolute -inset-6 rounded-3xl bg-gradient-to-br from-teal/10 via-transparent to-[#c4a35a]/15 blur-xl"
                   aria-hidden
                 />
                 <LaptopFrame
