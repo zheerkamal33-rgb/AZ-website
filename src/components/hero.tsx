@@ -8,18 +8,18 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="az-hero-wash relative flex min-h-[100svh] items-end overflow-hidden text-white"
+      className="az-hero-wash relative z-0 flex min-h-[100svh] items-end overflow-hidden text-white"
     >
       <div
-        className="az-grid pointer-events-none absolute inset-0 opacity-40"
+        className="az-grid pointer-events-none absolute inset-0 z-0 opacity-40"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"
+        className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 pt-32 sm:px-8 sm:pb-28">
+      <div className="relative z-[1] mx-auto w-full max-w-6xl px-5 pb-20 pt-32 sm:px-8 sm:pb-28">
         <p className="az-hero-enter font-display text-4xl font-semibold tracking-tight text-teal sm:text-5xl md:text-6xl lg:text-7xl">
           {t.brand}
         </p>

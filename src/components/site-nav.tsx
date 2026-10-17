@@ -25,22 +25,25 @@ export function SiteNav() {
 
   return (
     <header
+      /* Keep chrome LTR so EN|KU + hamburger stay top-right even when page is RTL */
+      dir="ltr"
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled
-          ? "border-b border-white/10 bg-ink/90 backdrop-blur-md"
+        "pointer-events-auto fixed inset-x-0 top-0 z-[9999] isolate transition-colors duration-300",
+        scrolled || open
+          ? "border-b border-white/10 bg-ink/95 backdrop-blur-md"
           : "bg-transparent"
       )}
     >
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <nav className="pointer-events-auto relative z-10 mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
         <a
           href="#home"
-          className="font-display text-sm font-semibold tracking-wide text-white"
+          className="relative z-10 font-display text-sm font-semibold tracking-wide text-white"
+          onClick={() => setOpen(false)}
         >
           {t.brand}
         </a>
 
-        <div className="flex items-center gap-4 md:gap-6">
+        <div className="relative z-10 flex items-center gap-3 sm:gap-4 md:gap-6">
           <ul className="hidden items-center gap-8 md:flex">
             {links.map((link) => (
               <li key={link.href}>
@@ -55,14 +58,14 @@ export function SiteNav() {
           </ul>
 
           <div
-            className="flex items-center rounded-md border border-white/15 bg-white/5 p-0.5 text-xs font-semibold tracking-wide"
+            className="relative z-10 flex items-center rounded-md border border-white/15 bg-white/5 p-0.5 text-xs font-semibold tracking-wide"
             role="group"
             aria-label="Language"
           >
             <button
               type="button"
               className={cn(
-                "rounded px-2.5 py-1.5 transition-colors",
+                "relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
                 lang === "en"
                   ? "bg-teal text-ink"
                   : "text-white/65 hover:text-white"
@@ -75,7 +78,7 @@ export function SiteNav() {
             <button
               type="button"
               className={cn(
-                "rounded px-2.5 py-1.5 transition-colors",
+                "relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
                 lang === "ku"
                   ? "bg-teal text-ink"
                   : "text-white/65 hover:text-white"
@@ -89,29 +92,30 @@ export function SiteNav() {
 
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center text-white md:hidden"
+            className="relative z-10 inline-flex h-11 w-11 touch-manipulation items-center justify-center text-white md:hidden"
             aria-expanded={open}
+            aria-controls="mobile-nav-panel"
             aria-label={open ? t.closeMenu : t.openMenu}
             onClick={() => setOpen((v) => !v)}
           >
             <span className="sr-only">Menu</span>
-            <span className="flex flex-col gap-1.5">
+            <span className="pointer-events-none flex flex-col gap-1.5">
               <span
                 className={cn(
-                  "block h-px w-5 bg-white transition-transform",
-                  open && "translate-y-[3.5px] rotate-45"
+                  "block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
+                  open && "translate-y-[5px] rotate-45"
                 )}
               />
               <span
                 className={cn(
-                  "block h-px w-5 bg-white transition-opacity",
+                  "block h-0.5 w-5 bg-white transition-opacity duration-200",
                   open && "opacity-0"
                 )}
               />
               <span
                 className={cn(
-                  "block h-px w-5 bg-white transition-transform",
-                  open && "-translate-y-[3.5px] -rotate-45"
+                  "block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
+                  open && "-translate-y-[5px] -rotate-45"
                 )}
               />
             </span>
@@ -119,23 +123,27 @@ export function SiteNav() {
         </div>
       </nav>
 
-      {open && (
-        <div className="border-t border-white/10 bg-ink/95 px-5 py-4 md:hidden">
-          <ul className="flex flex-col gap-3">
-            {links.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="block py-1 text-base text-white/80"
-                  onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        id="mobile-nav-panel"
+        className={cn(
+          "pointer-events-auto relative z-10 border-t border-white/10 bg-ink md:hidden",
+          open ? "block" : "hidden"
+        )}
+      >
+        <ul className="flex flex-col px-5 py-4">
+          {links.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="block py-3 text-base text-white/85 touch-manipulation"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   );
 }
