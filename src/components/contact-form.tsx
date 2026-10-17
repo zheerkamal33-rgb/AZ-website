@@ -17,11 +17,6 @@ const areaClass =
 
 const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
 
-/** Always put visitor identity in the body — Web3Forms templates vary. */
-function composeMessage(name: string, email: string, message: string) {
-  return `Name: ${name}\nEmail: ${email}\n\n${message}`;
-}
-
 export function ContactForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
@@ -59,7 +54,7 @@ export function ContactForm() {
       access_key: web3Key,
       name: payload.name,
       email: payload.email,
-      message: composeMessage(payload.name, payload.email, payload.message),
+      message: payload.message,
       subject: `${payload.name} — ${payload.email}`,
       from_name: payload.name,
       replyto: payload.email,
@@ -160,10 +155,6 @@ export function ContactForm() {
         if (subjectRef.current) {
           subjectRef.current.value = `${name} — ${email}`;
         }
-        const msgEl = formRef.current.elements.namedItem(
-          "message",
-        ) as HTMLTextAreaElement | null;
-        if (msgEl) msgEl.value = composeMessage(name, email, message);
         formRef.current.submit();
         return;
       }
