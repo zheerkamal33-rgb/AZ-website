@@ -204,22 +204,13 @@ export function SelectedWork() {
                   className="pointer-events-none absolute -inset-4 rounded-2xl bg-[radial-gradient(ellipse_at_30%_40%,rgba(126,200,196,0.16),transparent_55%)]"
                   aria-hidden
                 />
-                {/* Dual stacked monitors — different from Cashier laptop+overlays */}
-                <div className="relative grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-end sm:gap-3">
-                  <MonitorFrame
-                    src="/work/pharmacy/pharmacy-ops.png"
-                    alt="Pharmacy Rx queue and dispense"
-                    className="az-float relative z-20"
-                    label="az-clinic · rx queue"
-                    priority
-                  />
-                  <MonitorFrame
-                    src="/work/pharmacy/pharmacy-stock.png"
-                    alt="Pharmacy stock and expiry watch"
-                    className="az-float-slow relative z-10 sm:mb-6 sm:origin-bottom sm:scale-[0.96]"
-                    label="az-clinic · stock & expiry"
-                  />
-                </div>
+                <MonitorFrame
+                  src="/work/pharmacy/pharmacy-ops.png"
+                  alt="Pharmacy Rx queue and dispense"
+                  className="az-float relative z-20 mx-auto max-w-3xl"
+                  label="az-clinic · rx queue"
+                  priority
+                />
               </div>
             </Reveal>
 
