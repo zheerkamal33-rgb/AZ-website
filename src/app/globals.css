@@ -116,6 +116,23 @@ html {
   scroll-padding-top: 5rem;
 }
 
+/* Mobile menu — works with React state OR vanilla az-nav-boot.js */
+header.az-menu-open #mobile-nav-panel {
+  display: block !important;
+}
+
+header.az-menu-open .az-burger-1 {
+  transform: translateY(5px) rotate(45deg);
+}
+
+header.az-menu-open .az-burger-2 {
+  opacity: 0;
+}
+
+header.az-menu-open .az-burger-3 {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
 #home,
 #work,
 #about,

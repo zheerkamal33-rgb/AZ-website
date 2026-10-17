@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Noto_Sans_Arabic, Syne } from "next/font/google";
+import Script from "next/script";
 import { LanguageProvider } from "@/components/language-provider";
 import "./globals.css";
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             __html: `(function(){try{var l=localStorage.getItem('az-lang');if(l==='ku'){var r=document.documentElement;r.lang='ckb';r.dir='rtl';r.dataset.lang='ku';}}catch(e){}})();`,
           }}
         />
+        <Script src="/az-nav-boot.js" strategy="beforeInteractive" />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

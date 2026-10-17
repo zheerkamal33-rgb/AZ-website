@@ -27,8 +27,10 @@ export function SiteNav() {
     <header
       /* Keep chrome LTR so EN|KU + hamburger stay top-right even when page is RTL */
       dir="ltr"
+      data-az-header
       className={cn(
         "pointer-events-auto fixed inset-x-0 top-0 z-[9999] isolate transition-colors duration-300",
+        open && "az-menu-open",
         scrolled || open
           ? "border-b border-white/10 bg-ink/95 backdrop-blur-md"
           : "bg-transparent"
@@ -64,6 +66,7 @@ export function SiteNav() {
           >
             <button
               type="button"
+              data-set-lang="en"
               className={cn(
                 "relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
                 lang === "en"
@@ -77,6 +80,7 @@ export function SiteNav() {
             </button>
             <button
               type="button"
+              data-set-lang="ku"
               className={cn(
                 "relative z-10 touch-manipulation rounded px-2.5 py-1.5 transition-colors",
                 lang === "ku"
@@ -92,6 +96,7 @@ export function SiteNav() {
 
           <button
             type="button"
+            data-menu-toggle
             className="relative z-10 inline-flex h-11 w-11 touch-manipulation items-center justify-center text-white md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav-panel"
@@ -102,19 +107,19 @@ export function SiteNav() {
             <span className="pointer-events-none flex flex-col gap-1.5">
               <span
                 className={cn(
-                  "block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
+                  "az-burger-1 block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
                   open && "translate-y-[5px] rotate-45"
                 )}
               />
               <span
                 className={cn(
-                  "block h-0.5 w-5 bg-white transition-opacity duration-200",
+                  "az-burger-2 block h-0.5 w-5 bg-white transition-opacity duration-200",
                   open && "opacity-0"
                 )}
               />
               <span
                 className={cn(
-                  "block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
+                  "az-burger-3 block h-0.5 w-5 origin-center bg-white transition-transform duration-200",
                   open && "-translate-y-[5px] -rotate-45"
                 )}
               />
