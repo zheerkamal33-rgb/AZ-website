@@ -1,4 +1,5 @@
 import {
+  BarcodeScanner,
   LaptopFrame,
   MonitorFrame,
   PhoneFrame,
@@ -90,7 +91,7 @@ export function SelectedWork() {
         <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
             <Reveal className="order-2 lg:order-1">
-              <div className="az-stage relative">
+              <div className="az-stage relative pb-4">
                 <div
                   className="pointer-events-none absolute -inset-6 rounded-3xl bg-gradient-to-br from-teal/10 via-transparent to-[#3b82a0]/15 blur-xl"
                   aria-hidden
@@ -101,30 +102,10 @@ export function SelectedWork() {
                   className="az-float relative z-20"
                   priority
                 />
-                <div className="pointer-events-none absolute -bottom-6 -right-2 z-30 hidden w-[48%] rotate-[6deg] sm:block md:-right-4 lg:-bottom-8">
-                  <div className="overflow-hidden rounded-lg border border-white/12 bg-[#121820] shadow-[0_24px_50px_-20px_rgba(0,0,0,0.65)] ring-1 ring-black/25">
-                    <div className="relative aspect-[16/10]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/work/cashier/cashier-analysis.png"
-                        alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-top"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="pointer-events-none absolute -left-3 top-[18%] z-10 hidden w-[36%] -rotate-[8deg] opacity-90 md:block">
-                  <div className="overflow-hidden rounded-lg border border-white/10 bg-[#121820] shadow-xl ring-1 ring-black/20">
-                    <div className="relative aspect-[16/10]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/work/cashier/cashier-products.png"
-                        alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-top"
-                      />
-                    </div>
-                  </div>
-                </div>
+                {/* Barcode scanner prop — replaces UI screenshot overlays */}
+                <BarcodeScanner
+                  className="az-float-slow pointer-events-none absolute -bottom-2 -right-1 z-30 w-[34%] max-w-[11rem] rotate-[18deg] sm:-right-3 sm:bottom-0 sm:w-[30%] md:-right-5 lg:-bottom-4"
+                />
               </div>
             </Reveal>
 
