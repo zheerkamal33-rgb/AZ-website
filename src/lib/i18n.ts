@@ -163,9 +163,9 @@ export const messages: Record<Lang, Messages> = {
     aboutBody:
       "Zheer and Armand are computer science students who started Automated Zone to build software people actually use. We take on websites, apps, and systems for whoever needs them — and we've already put real projects out into the world. Reach us by email; we're the ones doing the work.",
     aboutZheerRole:
-      "Co-founder, CS student — likes systems thinking and getting the little operational details right.",
+      "Co-founder, CS student — more on the backend: APIs, data, servers, and making sure things run correctly behind the scenes.",
     aboutArmandRole:
-      "Co-founder, CS student — cares about how things look and how solid they feel underneath.",
+      "Co-founder, CS student — more on the interface: how the product looks and feels for the people using it.",
 
     contactEyebrow: "Contact",
     contactTitle: "Say hello.",
@@ -270,9 +270,9 @@ export const messages: Record<Lang, Messages> = {
     aboutBody:
       "Zheer و Armand خوێندکاری زانستی کۆمپیوتەرن کە Automated Zoneیان دەستپێکرد بۆ دروستکردنی نەرمەکاڵا کە خەڵک بەڕاستی بەکاری دەهێنن. وێبسایت، ئەپ و سیستەم بۆ هەر کەسێک دروست دەکەین کە پێویستی پێیە — و پێشتر پڕۆژەی ڕاستەقینەمان ناردووەتە دەرەوە. بە ئیمەیڵ پەیوەندیمان پێوە بکە؛ ئێمە خودی کارەکە دەکەین.",
     aboutZheerRole:
-      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — حەزی لە بیرکردنەوەی سیستەمی و ڕێکخستنی وردەکاری کارەکانە.",
+      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — زیاتر لە لایەنی سێرڤەر و پشتەوە: API، داتا، و دڵنیابوون لەوەی شتەکان ڕاست کار دەکەن.",
     aboutArmandRole:
-      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — گرنگی بە شێوە دەدات و بەوەی لە ژێرەوە پتەو بێت.",
+      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — زیاتر لە لایەنی ڕووکار: چۆن بەرهەمەکە دەردەکەوێت و هەستی پێ دەکرێت بۆ بەکارهێنەر.",
 
     contactEyebrow: "پەیوەندی",
     contactTitle: "سڵاو بڵێ.",
