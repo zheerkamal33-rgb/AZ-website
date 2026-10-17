@@ -125,8 +125,8 @@ export function BarcodeScanner({ className }: { className?: string }) {
       <Image
         src="/work/cashier/barcode-scanner.png"
         alt=""
-        width={607}
-        height={1036}
+        width={382}
+        height={682}
         quality={92}
         className="h-auto w-full drop-shadow-[0_28px_48px_rgba(0,0,0,0.7)]"
         loading="lazy"
