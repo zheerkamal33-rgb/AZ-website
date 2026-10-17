@@ -58,7 +58,8 @@ export function TabletFrame({
             src={src}
             alt={alt}
             fill
-            sizes="(max-width: 1024px) 90vw, 520px"
+            sizes="(max-width: 1024px) 100vw, 960px"
+            quality={95}
             className="object-cover object-top"
             priority={priority}
           />
@@ -97,7 +98,8 @@ export function MonitorFrame({
             src={src}
             alt={alt}
             fill
-            sizes="(max-width: 1024px) 100vw, 800px"
+            sizes="(max-width: 1024px) 100vw, 1400px"
+            quality={95}
             className="object-cover object-top"
             priority={priority}
           />
@@ -236,7 +238,8 @@ export function LaptopFrame({
             src={src}
             alt={alt}
             fill
-            sizes="(max-width: 1024px) 100vw, 720px"
+            sizes="(max-width: 1024px) 100vw, 1400px"
+            quality={95}
             className="object-cover object-top"
             priority={priority}
           />
