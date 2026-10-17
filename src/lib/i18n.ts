@@ -78,6 +78,7 @@ export type Messages = {
   formSending: string;
   formErrorRequired: string;
   formErrorEmail: string;
+  formErrorSend: string;
   formSuccessTitle: string;
   formSuccessBody: string;
   formAnother: string;
@@ -181,9 +182,11 @@ export const messages: Record<Lang, Messages> = {
     formSending: "Sending…",
     formErrorRequired: "Please fill in your name, email, and message.",
     formErrorEmail: "Enter a valid email so we can get back to you.",
+    formErrorSend:
+      "Could not send the message. Please try again or call us directly.",
     formSuccessTitle: "Thanks — we got it.",
     formSuccessBody:
-      "Zheer or Armand will follow up shortly. Prefer a call? Use the numbers on this page.",
+      "Zheer or Armand will follow up shortly at automated.zoneaz@gmail.com. Prefer a call? Use the numbers on this page.",
     formAnother: "Send another message",
 
     footerBlurb:
@@ -286,9 +289,11 @@ export const messages: Record<Lang, Messages> = {
     formSending: "دەنێردرێت…",
     formErrorRequired: "تکایە ناو، ئیمەیڵ، و نامە پڕ بکەرەوە.",
     formErrorEmail: "ئیمەیڵێکی دروست بنووسە بۆ ئەوەی بتوانین وەڵامت بدەینەوە.",
+    formErrorSend:
+      "نەتوانرا نامەکە بنێردرێت. دووبارە هەوڵبدەرەوە یان پەیوەندی تەلەفۆنی بکە.",
     formSuccessTitle: "سوپاس — وەرمانگرت.",
     formSuccessBody:
-      "ژیەر یان ئەرماند بەم زووانە پەیوەندیت پێوە دەکەن. پەیوەندی تەلەفۆنی دەتەوێت؟ ژمارەکان لەم بەشەدا بەکاربهێنە.",
+      "ژیەر یان ئەرماند بەم زووانە پەیوەندیت پێوە دەکەن لە automated.zoneaz@gmail.com. پەیوەندی تەلەفۆنی دەتەوێت؟ ژمارەکان لەم بەشەدا بەکاربهێنە.",
     formAnother: "نامەیەکی تر بنێرە",
 
     footerBlurb:

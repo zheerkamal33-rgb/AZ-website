@@ -15,10 +15,66 @@ const fieldClass =
 const areaClass =
   "min-h-32 rounded-none border-0 border-b border-white/20 bg-transparent px-0 text-base text-white shadow-none placeholder:text-white/35 focus-visible:border-teal focus-visible:ring-0 focus-visible:ring-offset-0 disabled:bg-transparent md:text-base";
 
+const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
+
 export function ContactForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+
+  async function sendViaWeb3Forms(payload: {
+    name: string;
+    email: string;
+    message: string;
+  }) {
+    if (!web3Key) return null;
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: web3Key,
+        name: payload.name,
+        email: payload.email,
+        message: payload.message,
+        subject: `Automated Zone contact — ${payload.name}`,
+        from_name: "Automated Zone",
+        replyto: payload.email,
+        botcheck: false,
+      }),
+    });
+    const data = (await res.json().catch(() => ({}))) as {
+      success?: boolean;
+      message?: string;
+    };
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || t.formErrorSend);
+    }
+    return true;
+  }
+
+  async function sendViaApi(payload: {
+    name: string;
+    email: string;
+    message: string;
+  }) {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...payload, website: "" }),
+    });
+    const data = (await res.json().catch(() => ({}))) as {
+      ok?: boolean;
+      error?: string;
+      code?: string;
+    };
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || t.formErrorSend);
+    }
+    return true;
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -29,6 +85,13 @@ export function ContactForm() {
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
+    const website = String(data.get("website") ?? "").trim();
+
+    if (website) {
+      setStatus("success");
+      form.reset();
+      return;
+    }
 
     if (!name || !email || !message) {
       setStatus("error");
@@ -43,9 +106,18 @@ export function ContactForm() {
     }
 
     setStatus("loading");
-    await new Promise((r) => setTimeout(r, 700));
-    setStatus("success");
-    form.reset();
+    try {
+      if (web3Key) {
+        await sendViaWeb3Forms({ name, email, message });
+      } else {
+        await sendViaApi({ name, email, message });
+      }
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setError(err instanceof Error ? err.message : t.formErrorSend);
+    }
   }
 
   if (status === "success") {
@@ -70,6 +142,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="az-contact-form space-y-8" noValidate>
+      {/* Honeypot */}
+      <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="space-y-2">
         <Label
           htmlFor="name"
