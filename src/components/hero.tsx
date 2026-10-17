@@ -18,24 +18,25 @@ export function Hero() {
           Automated Zone
         </p>
         <h1 className="az-hero-enter az-hero-enter-delay-1 mt-6 max-w-3xl font-display text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
-          Software that looks sharp and works hard.
+          A studio that ships websites, apps, and systems with real craft.
         </h1>
         <p className="az-hero-enter az-hero-enter-delay-2 mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-          We design and build websites, applications, and systems for anyone,
-          anywhere — product-minded engineering for teams who need to ship.
+          We&apos;re Zheer and Armand — two founders who design, build, and deliver
+          software that looks intentional and holds up in production. Browse the
+          work, then say hello.
         </p>
         <div className="az-hero-enter az-hero-enter-delay-3 mt-10 flex flex-wrap items-center gap-4">
           <a
-            href="#contact"
+            href="#work"
             className="az-cta inline-flex h-11 items-center justify-center rounded-md bg-teal px-6 text-sm font-semibold text-ink hover:bg-teal-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
-            Start a project
+            View selected work
           </a>
           <a
-            href="#work"
+            href="#contact"
             className="az-cta inline-flex h-11 items-center justify-center rounded-md border border-white/25 px-6 text-sm font-medium text-white/90 hover:border-teal hover:text-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
-            See what we build
+            Get in touch
           </a>
         </div>
       </div>

@@ -47,11 +47,11 @@ export function ContactForm() {
         role="status"
       >
         <p className="font-display text-lg font-semibold text-ink">
-          Message received.
+          Thanks — we got it.
         </p>
         <p className="mt-2 text-sm text-muted-foreground">
-          Thanks for reaching out. Zheer or Armand will follow up shortly. Prefer
-          a call? Use the numbers below.
+          Zheer or Armand will follow up shortly. Prefer a call? Use the numbers
+          on the left.
         </p>
         <Button
           type="button"
@@ -98,7 +98,7 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={5}
-          placeholder="What are you building?"
+          placeholder="What would you like to talk about?"
           disabled={status === "loading"}
           className="min-h-28 bg-white"
           aria-invalid={status === "error" && !!error}
@@ -113,7 +113,7 @@ export function ContactForm() {
 
       {status === "idle" && (
         <p className="text-sm text-muted-foreground">
-          Tell us about the project — we usually reply within a day.
+          Introduce yourself — we usually reply within a day.
         </p>
       )}
 

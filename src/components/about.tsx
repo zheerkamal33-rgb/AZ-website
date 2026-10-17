@@ -10,13 +10,13 @@ export function About() {
               About
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-              Founded by Zheer &amp; Armand.
+              Automated Zone is Zheer &amp; Armand.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We started Automated Zone because good software should feel
-              inevitable — sharp to look at, solid under load, and built by
-              people you can actually reach. No agency maze. Two founders who
-              design, code, and ship.
+              A small studio with high standards. We care about how software
+              feels on first glance and how it behaves six months later — visual
+              clarity, careful engineering, and direct communication. No agency
+              maze. Two people who design, code, and stand behind the work.
             </p>
           </Reveal>
 
@@ -27,8 +27,8 @@ export function About() {
                   Zheer
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Co-founder — product sense, systems thinking, and the quiet
-                  obsession with getting the details right.
+                  Co-founder — product sense, systems thinking, and an obsession
+                  with getting the details right.
                 </p>
               </div>
               <div>

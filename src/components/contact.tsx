@@ -16,11 +16,11 @@ export function Contact() {
               Contact
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-              Ready when you are.
+              Talk to us directly.
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Call either founder, or send a note. We keep the line short on
-              purpose.
+              Call either founder, or send a short note. We keep the line short
+              on purpose — you reach the people who do the work.
             </p>
 
             <ul className="mt-10 space-y-5">

@@ -1,10 +1,10 @@
 import { About } from "@/components/about";
+import { Capabilities } from "@/components/capabilities";
 import { Contact } from "@/components/contact";
 import { Hero } from "@/components/hero";
-import { HowWeWork } from "@/components/how-we-work";
+import { SelectedWork } from "@/components/selected-work";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
-import { WhatWeBuild } from "@/components/what-we-build";
 
 export default function Home() {
   return (
@@ -12,8 +12,8 @@ export default function Home() {
       <SiteNav />
       <main className="flex-1">
         <Hero />
-        <WhatWeBuild />
-        <HowWeWork />
+        <SelectedWork />
+        <Capabilities />
         <About />
         <Contact />
       </main>

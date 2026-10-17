@@ -5,7 +5,8 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-lg font-semibold">Automated Zone</p>
           <p className="mt-2 max-w-sm text-sm text-white/55">
-            Product-minded engineering for websites, applications, and systems.
+            Studio of Zheer &amp; Armand — websites, applications, and systems
+            with careful craft.
           </p>
         </div>
         <div className="flex flex-col gap-2 text-sm sm:items-end">

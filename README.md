@@ -1,6 +1,6 @@
 # Automated Zone
 
-Marketing site for **Automated Zone** — product-minded engineering for websites, applications, and systems. Founded by Zheer and Armand.
+Portfolio site for **Automated Zone** — the studio of Zheer and Armand. Showcases selected work, who we are, and how to get in touch.
 
 ## Stack
 
@@ -20,14 +20,14 @@ Open [http://127.0.0.1:4317](http://127.0.0.1:4317).
 
 ## Scripts
 
-| Command        | Description              |
-| -------------- | ------------------------ |
-| `npm run dev`  | Start the dev server     |
-| `npm run build`| Production build         |
-| `npm run start`| Serve the production build |
-| `npm run lint` | Run ESLint               |
+| Command         | Description                |
+| --------------- | -------------------------- |
+| `npm run dev`   | Start the dev server       |
+| `npm run build` | Production build           |
+| `npm run start` | Serve the production build |
+| `npm run lint`  | Run ESLint                 |
 
 ## Contact
 
-- Zheer — (774) 119-7770
-- Armand — (770) 891-2007
+- Zheer — 774-119-7770
+- Armand — 770-891-2007
