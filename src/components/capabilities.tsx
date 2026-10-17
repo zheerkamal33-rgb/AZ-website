@@ -1,34 +1,29 @@
+"use client";
+
+import { useLanguage } from "@/components/language-provider";
 import { Reveal } from "@/components/reveal";
 
-const items = [
-  {
-    title: "Delivery platforms",
-    body: "Two-sided ops — merchants create orders, riders pick up and deliver, customers receive. Built for real street-level coordination.",
-  },
-  {
-    title: "Market POS",
-    body: "Cashier systems for markets — fast checkout, multi-currency, product catalogs, and sales analysis that belongs on the counter.",
-  },
-  {
-    title: "End-to-end craft",
-    body: "From interface to architecture. We design, build, and ship — then stand behind how it looks and how it runs.",
-  },
-];
-
 export function Capabilities() {
+  const { t } = useLanguage();
+
+  const items = [
+    { title: t.capsDeliveryTitle, body: t.capsDeliveryBody },
+    { title: t.capsPosTitle, body: t.capsPosBody },
+    { title: t.capsCraftTitle, body: t.capsCraftBody },
+  ];
+
   return (
     <section className="border-y border-slate-line bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="text-sm font-medium tracking-wide text-teal-deep uppercase">
-            Capabilities
+            {t.capsEyebrow}
           </p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            What we&apos;re known for.
+            {t.capsTitle}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Production software for operators — sharp UX, solid engineering,
-            direct founders.
+            {t.capsIntro}
           </p>
         </Reveal>
 

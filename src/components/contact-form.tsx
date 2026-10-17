@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -9,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 type Status = "idle" | "loading" | "success" | "error";
 
 export function ContactForm() {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
 
@@ -24,13 +26,13 @@ export function ContactForm() {
 
     if (!name || !email || !message) {
       setStatus("error");
-      setError("Please fill in your name, email, and message.");
+      setError(t.formErrorRequired);
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus("error");
-      setError("Enter a valid email so we can get back to you.");
+      setError(t.formErrorEmail);
       return;
     }
 
@@ -47,19 +49,16 @@ export function ContactForm() {
         role="status"
       >
         <p className="font-display text-lg font-semibold text-ink">
-          Thanks — we got it.
+          {t.formSuccessTitle}
         </p>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Zheer or Armand will follow up shortly. Prefer a call? Use the numbers
-          on the left.
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">{t.formSuccessBody}</p>
         <Button
           type="button"
           variant="outline"
           className="mt-6"
           onClick={() => setStatus("idle")}
         >
-          Send another message
+          {t.formAnother}
         </Button>
       </div>
     );
@@ -68,37 +67,38 @@ export function ContactForm() {
   return (
     <form onSubmit={onSubmit} className="space-y-5" noValidate>
       <div className="space-y-2">
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name">{t.formName}</Label>
         <Input
           id="name"
           name="name"
           autoComplete="name"
-          placeholder="Your name"
+          placeholder={t.formNamePh}
           disabled={status === "loading"}
           className="h-11 bg-white"
           aria-invalid={status === "error" && !!error}
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">{t.formEmail}</Label>
         <Input
           id="email"
           name="email"
           type="email"
           autoComplete="email"
-          placeholder="you@company.com"
+          placeholder={t.formEmailPh}
           disabled={status === "loading"}
           className="h-11 bg-white"
+          dir="ltr"
           aria-invalid={status === "error" && !!error}
         />
       </div>
       <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">{t.formMessage}</Label>
         <Textarea
           id="message"
           name="message"
           rows={5}
-          placeholder="What would you like to talk about?"
+          placeholder={t.formMessagePh}
           disabled={status === "loading"}
           className="min-h-28 bg-white"
           aria-invalid={status === "error" && !!error}
@@ -112,9 +112,7 @@ export function ContactForm() {
       )}
 
       {status === "idle" && (
-        <p className="text-sm text-muted-foreground">
-          Introduce yourself — we usually reply within a day.
-        </p>
+        <p className="text-sm text-muted-foreground">{t.formHint}</p>
       )}
 
       <Button
@@ -122,7 +120,7 @@ export function ContactForm() {
         disabled={status === "loading"}
         className="az-cta h-11 bg-ink px-6 text-mist hover:bg-ink-soft"
       >
-        {status === "loading" ? "Sending…" : "Send message"}
+        {status === "loading" ? t.formSending : t.formSubmit}
       </Button>
     </form>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   BarcodeScanner,
   LaptopFrame,
@@ -5,11 +7,17 @@ import {
   PhoneFrame,
   TabletFrame,
 } from "@/components/device-frames";
+import { useLanguage } from "@/components/language-provider";
 import { Reveal } from "@/components/reveal";
 
 export function SelectedWork() {
+  const { t } = useLanguage();
+
   return (
-    <section id="work" className="relative overflow-hidden bg-ink py-24 text-white sm:py-32">
+    <section
+      id="work"
+      className="relative overflow-hidden bg-ink py-24 text-white sm:py-32"
+    >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.18] az-grid"
         aria-hidden
@@ -26,14 +34,13 @@ export function SelectedWork() {
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="text-sm font-medium tracking-wide text-teal uppercase">
-            Work
+            {t.workEyebrow}
           </p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-            Selected projects
+            {t.workTitle}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-            Production systems we designed and shipped — delivery, market POS,
-            cafe menus, and pharmacy ops.
+            {t.workIntro}
           </p>
         </Reveal>
 
@@ -42,21 +49,22 @@ export function SelectedWork() {
           <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
             <Reveal>
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                Two-sided delivery platform
+                {t.deliveryEyebrow}
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                Delivery operations app
+                {t.deliveryTitle}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
-                <span className="font-medium text-white/90">Problem — </span>
-                Shops needed one place to create orders and get goods to their
-                customers without juggling calls and spreadsheets.
+                <span className="font-medium text-white/90">
+                  {t.deliveryProblemLabel}
+                </span>
+                {t.deliveryProblem}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
-                <span className="font-medium text-white">Built — </span>
-                Merchant creates the order; a rider picks up from the shop and
-                delivers to the end customer — merchant, rider, and customer in
-                one coordinated flow.
+                <span className="font-medium text-white">
+                  {t.deliveryBuiltLabel}
+                </span>
+                {t.deliveryBuilt}
               </p>
             </Reveal>
 
@@ -102,55 +110,52 @@ export function SelectedWork() {
                   className="az-float relative z-20"
                   priority
                 />
-                {/* Barcode scanner prop — replaces UI screenshot overlays */}
-                <BarcodeScanner
-                  className="az-float-slow pointer-events-none absolute -bottom-2 -right-1 z-30 w-[34%] max-w-[11rem] rotate-[18deg] sm:-right-3 sm:bottom-0 sm:w-[30%] md:-right-5 lg:-bottom-4"
-                />
+                <BarcodeScanner className="az-float-slow pointer-events-none absolute -bottom-2 -right-1 z-30 w-[34%] max-w-[11rem] rotate-[18deg] sm:-right-3 sm:bottom-0 sm:w-[30%] md:-right-5 lg:-bottom-4" />
               </div>
             </Reveal>
 
             <Reveal delayMs={80} className="order-1 lg:order-2">
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                Point of sale · AZ Market
+                {t.cashierEyebrow}
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                Market Cashier
+                {t.cashierTitle}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
-                <span className="font-medium text-white/90">Problem — </span>
-                Market vendors needed fast, reliable checkout without clunky
-                retail software.
+                <span className="font-medium text-white/90">
+                  {t.cashierProblemLabel}
+                </span>
+                {t.cashierProblem}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
-                <span className="font-medium text-white">Built — </span>
-                AZ Market Cashier — scan or pick products, manage sales in IQD
-                or USD, track inventory and analysis, and complete sales on the
-                floor.
+                <span className="font-medium text-white">
+                  {t.cashierBuiltLabel}
+                </span>
+                {t.cashierBuilt}
               </p>
             </Reveal>
           </div>
         </article>
 
-        {/* Cafe menu — tablet guest menu */}
+        {/* Cafe */}
         <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
             <Reveal>
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                Table-side tablet menu
+                {t.cafeEyebrow}
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                Cafe menu system
+                {t.cafeTitle}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
-                <span className="font-medium text-white/90">Problem — </span>
-                Cafes needed a guest-facing menu waitstaff can bring to the
-                table — always current, never reprinted.
+                <span className="font-medium text-white/90">
+                  {t.cafeProblemLabel}
+                </span>
+                {t.cafeProblem}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
-                <span className="font-medium text-white">Built — </span>
-                An iPad digital menu for the table: categories, items, and live
-                IQD prices with KU · AR · EN — handed to guests like a menu,
-                updated like software.
+                <span className="font-medium text-white">{t.cafeBuiltLabel}</span>
+                {t.cafeBuilt}
               </p>
             </Reveal>
 
@@ -176,7 +181,7 @@ export function SelectedWork() {
           </div>
         </article>
 
-        {/* Pharmacy — clinical dual-panel, not Cashier clone */}
+        {/* Pharmacy */}
         <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
             <Reveal className="order-2 lg:order-1">
@@ -197,21 +202,22 @@ export function SelectedWork() {
 
             <Reveal delayMs={80} className="order-1 lg:order-2">
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                Clinical dispense ops
+                {t.pharmacyEyebrow}
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                Pharmacy system
+                {t.pharmacyTitle}
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
-                <span className="font-medium text-white/90">Problem — </span>
-                Pharmacies needed software built around prescriptions, stock
-                expiry, and controlled drugs — not a generic checkout grid.
+                <span className="font-medium text-white/90">
+                  {t.pharmacyProblemLabel}
+                </span>
+                {t.pharmacyProblem}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
-                <span className="font-medium text-white">Built — </span>
-                A clinical dispense console: Rx queue with lot/expiry checks,
-                stock watchlists, and counter workflows shaped for pharmacy
-                staff.
+                <span className="font-medium text-white">
+                  {t.pharmacyBuiltLabel}
+                </span>
+                {t.pharmacyBuilt}
               </p>
             </Reveal>
           </div>

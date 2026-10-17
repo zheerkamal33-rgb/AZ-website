@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Figtree, Syne } from "next/font/google";
+import { Figtree, Noto_Sans_Arabic, Syne } from "next/font/google";
+import { LanguageProvider } from "@/components/language-provider";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -14,6 +15,13 @@ const syne = Syne({
   display: "swap",
 });
 
+const notoArabic = Noto_Sans_Arabic({
+  variable: "--font-arabic",
+  subsets: ["arabic"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Automated Zone — Studio of Zheer & Armand",
   description:
@@ -24,9 +32,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${figtree.variable} ${syne.variable} h-full`}
+      dir="ltr"
+      className={`${figtree.variable} ${syne.variable} ${notoArabic.variable} h-full`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

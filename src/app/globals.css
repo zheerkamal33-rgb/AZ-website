@@ -115,6 +115,27 @@
     font-family: var(--font-display), ui-sans-serif, sans-serif;
   }
 
+  /* Sorani Kurdish — Arabic-script font + RTL-safe borders */
+  html[dir="rtl"] body {
+    font-family: var(--font-arabic), var(--font-sans), ui-sans-serif, sans-serif;
+  }
+
+  html[dir="rtl"] .font-display {
+    font-family: var(--font-arabic), var(--font-display), ui-sans-serif, sans-serif;
+  }
+
+  html[dir="rtl"] .az-rtl-border {
+    border-left-width: 0;
+    border-right-width: 2px;
+    padding-left: 0;
+    padding-right: 1.5rem;
+  }
+
+  /* Device mockups stay LTR visually even in KU */
+  .az-stage {
+    direction: ltr;
+  }
+
   .az-grid {
     background-image:
       linear-gradient(to right, color-mix(in srgb, var(--teal) 12%, transparent) 1px, transparent 1px),

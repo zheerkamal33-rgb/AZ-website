@@ -1,15 +1,18 @@
+"use client";
+
+import { useLanguage } from "@/components/language-provider";
+
 export function SiteFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-white/10 bg-ink text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-end sm:justify-between sm:px-8">
         <div>
-          <p className="font-display text-lg font-semibold">Automated Zone</p>
-          <p className="mt-2 max-w-sm text-sm text-white/55">
-            Studio of Zheer &amp; Armand — CS graduates shipping delivery
-            platforms and market POS.
-          </p>
+          <p className="font-display text-lg font-semibold">{t.brand}</p>
+          <p className="mt-2 max-w-sm text-sm text-white/55">{t.footerBlurb}</p>
         </div>
-        <div className="flex flex-col gap-2 text-sm sm:items-end">
+        <div className="flex flex-col gap-2 text-sm sm:items-end" dir="ltr">
           <a
             href="tel:+17741197770"
             className="text-white/70 transition-colors hover:text-teal"
@@ -26,7 +29,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-6xl px-5 py-4 text-xs text-white/40 sm:px-8">
-          © 2026 Automated Zone. Built by Zheer &amp; Armand.
+          {t.footerCopy}
         </p>
       </div>
     </footer>

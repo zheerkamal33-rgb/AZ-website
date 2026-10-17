@@ -1,4 +1,7 @@
+"use client";
+
 import { ContactForm } from "@/components/contact-form";
+import { useLanguage } from "@/components/language-provider";
 import { Reveal } from "@/components/reveal";
 
 const phones = [
@@ -7,20 +10,21 @@ const phones = [
 ];
 
 export function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <p className="text-sm font-medium tracking-wide text-teal-deep uppercase">
-              Contact
+              {t.contactEyebrow}
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-              Talk to us directly.
+              {t.contactTitle}
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Call either founder, or send a short note. We keep the line short
-              on purpose — you reach the people who do the work.
+              {t.contactBody}
             </p>
 
             <ul className="mt-10 space-y-5">
@@ -30,6 +34,7 @@ export function Contact() {
                   <a
                     href={`tel:+1${p.number}`}
                     className="az-cta mt-1 inline-block font-display text-xl font-semibold text-ink underline-offset-4 hover:text-teal-deep hover:underline"
+                    dir="ltr"
                   >
                     {p.display}
                   </a>
