@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/language-provider";
+import { LatinText } from "@/components/latin-text";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -30,7 +31,7 @@ export function Hero() {
           {t.heroHeadline}
         </h1>
         <p className="az-hero-enter az-hero-enter-delay-2 mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-          {t.heroBody}
+          <LatinText text={t.heroBody} />
         </p>
         <div className="az-hero-enter az-hero-enter-delay-3 mt-10 flex flex-wrap items-center gap-4">
           <a

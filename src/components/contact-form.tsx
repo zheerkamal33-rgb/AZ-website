@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLanguage } from "@/components/language-provider";
+import { LatinText } from "@/components/latin-text";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -172,7 +173,7 @@ export function ContactForm() {
           {t.formSuccessTitle}
         </p>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60 sm:text-base">
-          {t.formSuccessBody}
+          <LatinText text={t.formSuccessBody} />
         </p>
         <button
           type="button"

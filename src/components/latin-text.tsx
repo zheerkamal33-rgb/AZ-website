@@ -1,8 +1,17 @@
 import { Fragment, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-/** Product / brand Latin tokens that stay English in KU copy. */
-const LATIN_TOKEN = /(Automated Zone|AZ Market)/g;
+/** Product / brand / name Latin tokens that stay English in KU copy. */
+const LATIN_TOKEN =
+  /(Automated Zone|AZ Market Cashier|AZ Market|Market Cashier|Zheer|Armand)/g;
+const LATIN_SET = new Set([
+  "Automated Zone",
+  "AZ Market Cashier",
+  "AZ Market",
+  "Market Cashier",
+  "Zheer",
+  "Armand",
+]);
 
 /**
  * Renders a string, wrapping always-English Latin tokens so RTL/KU
@@ -21,7 +30,7 @@ export function LatinText({
   return (
     <>
       {parts.map((part, i) =>
-        part === "Automated Zone" || part === "AZ Market" ? (
+        LATIN_SET.has(part) ? (
           <span key={i} className={cn("az-latin", className)} lang="en">
             {part}
           </span>

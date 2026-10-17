@@ -120,7 +120,7 @@ export function SelectedWork() {
                 <LatinText text={t.cashierEyebrow} />
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                {t.cashierTitle}
+                <LatinText text={t.cashierTitle} />
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
                 <span className="font-medium text-white/90">

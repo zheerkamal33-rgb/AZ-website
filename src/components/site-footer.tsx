@@ -17,7 +17,7 @@ export function SiteFooter() {
             {t.brand}
           </p>
           <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-            {t.footerBlurb}
+            <LatinText text={t.footerBlurb} />
           </p>
         </div>
         <div
