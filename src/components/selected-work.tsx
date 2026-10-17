@@ -26,8 +26,8 @@ export function SelectedWork() {
             Selected projects
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-            Two production systems we designed and shipped — a two-sided
-            delivery platform and AZ Market cashier.
+            Production systems we designed and shipped — delivery, market POS,
+            cafe menus, and pharmacy ops.
           </p>
         </Reveal>
 
@@ -66,14 +66,14 @@ export function SelectedWork() {
                   className="az-float-slow absolute left-[4%] top-[12%] z-10 -rotate-[14deg] opacity-90 sm:left-[8%] sm:top-[8%]"
                 />
                 <PhoneFrame
-                  src="/work/delivery/delivery-home.jpg"
-                  alt="Delivery app home"
+                  src="/work/delivery/delivery-deliveries.jpg"
+                  alt="Delivery app deliveries list"
                   className="az-float relative z-30"
                   priority
                 />
                 <PhoneFrame
-                  src="/work/delivery/delivery-deliveries.jpg"
-                  alt="Delivery app deliveries list"
+                  src="/work/delivery/delivery-home.jpg"
+                  alt="Delivery app home"
                   className="az-float-slow absolute right-[2%] top-[18%] z-20 rotate-[12deg] opacity-95 sm:right-[6%] sm:top-[14%]"
                 />
               </div>
@@ -140,6 +140,118 @@ export function SelectedWork() {
                 AZ Market Cashier — scan or pick products, manage sales in IQD
                 or USD, track inventory and analysis, and complete sales on the
                 floor.
+              </p>
+            </Reveal>
+          </div>
+        </article>
+
+        {/* Cafe menu */}
+        <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+            <Reveal>
+              <p className="text-xs font-medium tracking-wide text-teal uppercase">
+                Digital menus
+              </p>
+              <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+                Cafe menu system
+              </h3>
+              <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
+                <span className="font-medium text-white/90">Problem — </span>
+                Cafes needed menus that stay current and look sharp — without
+                reprinting every price change.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
+                <span className="font-medium text-white">Built — </span>
+                A mobile-friendly digital menu: categories, items, and live IQD
+                prices with KU · AR · EN — ready for customer screens.
+              </p>
+            </Reveal>
+
+            <Reveal delayMs={100}>
+              <div className="az-stage relative mx-auto flex min-h-[22rem] items-end justify-center pb-4 sm:min-h-[26rem] md:min-h-[28rem]">
+                <div
+                  className="pointer-events-none absolute inset-x-8 bottom-0 h-24 rounded-[100%] bg-teal/15 blur-2xl"
+                  aria-hidden
+                />
+                <PhoneFrame
+                  src="/work/cafe/cafe-home.png"
+                  alt="Cafe menu categories"
+                  className="az-float-slow absolute left-[4%] top-[12%] z-10 -rotate-[14deg] opacity-90 sm:left-[8%] sm:top-[8%]"
+                />
+                <PhoneFrame
+                  src="/work/cafe/cafe-items.png"
+                  alt="Cafe menu items list"
+                  className="az-float relative z-30"
+                />
+                <PhoneFrame
+                  src="/work/cafe/cafe-item.png"
+                  alt="Cafe menu item detail"
+                  className="az-float-slow absolute right-[2%] top-[18%] z-20 rotate-[12deg] opacity-95 sm:right-[6%] sm:top-[14%]"
+                />
+              </div>
+            </Reveal>
+          </div>
+        </article>
+
+        {/* Pharmacy */}
+        <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+            <Reveal className="order-2 lg:order-1">
+              <div className="az-stage relative">
+                <div
+                  className="pointer-events-none absolute -inset-6 rounded-3xl bg-gradient-to-br from-teal/10 via-transparent to-[#3b82a0]/15 blur-xl"
+                  aria-hidden
+                />
+                <LaptopFrame
+                  src="/work/pharmacy/pharmacy-inventory.png"
+                  alt="Pharmacy inventory"
+                  className="az-float relative z-20"
+                  chromeLabel="az-pharmacy · inventory"
+                />
+                <div className="pointer-events-none absolute -bottom-6 -right-2 z-30 hidden w-[48%] rotate-[6deg] sm:block md:-right-4 lg:-bottom-8">
+                  <div className="overflow-hidden rounded-lg border border-white/12 bg-[#121820] shadow-[0_24px_50px_-20px_rgba(0,0,0,0.65)] ring-1 ring-black/25">
+                    <div className="relative aspect-[16/10]">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/work/pharmacy/pharmacy-rx.png"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute -left-3 top-[18%] z-10 hidden w-[36%] -rotate-[8deg] opacity-90 md:block">
+                  <div className="overflow-hidden rounded-lg border border-white/10 bg-[#121820] shadow-xl ring-1 ring-black/20">
+                    <div className="relative aspect-[16/10]">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/work/pharmacy/pharmacy-counter.png"
+                        alt=""
+                        className="absolute inset-0 h-full w-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delayMs={80} className="order-1 lg:order-2">
+              <p className="text-xs font-medium tracking-wide text-teal uppercase">
+                Pharmacy operations
+              </p>
+              <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+                Pharmacy system
+              </h3>
+              <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
+                <span className="font-medium text-white/90">Problem — </span>
+                Pharmacies needed software that respects inventory,
+                prescriptions, and day-to-day counter work.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
+                <span className="font-medium text-white">Built — </span>
+                Inventory, prescription queue, and counter sales in one
+                operational system — structured for the workflows behind the
+                counter.
               </p>
             </Reveal>
           </div>

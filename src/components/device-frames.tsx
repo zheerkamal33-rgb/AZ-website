@@ -43,11 +43,13 @@ export function LaptopFrame({
   alt,
   className,
   priority = false,
+  chromeLabel = "az-market · cashier",
 }: {
   src: string;
   alt: string;
   className?: string;
   priority?: boolean;
+  chromeLabel?: string;
 }) {
   return (
     <div className={cn("az-laptop relative w-full max-w-3xl", className)}>
@@ -57,7 +59,7 @@ export function LaptopFrame({
           <span className="size-2 rounded-full bg-[#febc2e] sm:size-2.5" />
           <span className="size-2 rounded-full bg-[#28c840] sm:size-2.5" />
           <div className="ml-2 flex-1 truncate rounded-md bg-black/35 px-3 py-1 text-[10px] tracking-wide text-white/35 sm:text-xs">
-            az-market · cashier
+            {chromeLabel}
           </div>
         </div>
         <div className="relative aspect-[16/9] bg-white">
