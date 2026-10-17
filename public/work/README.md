@@ -1,10 +1,11 @@
 # Project screenshots
 
-Drop PNGs here (same filenames) — the Work section picks them up automatically:
+## Delivery (mobile)
+- `delivery/delivery-login.jpg`
+- `delivery/delivery-home.jpg`
+- `delivery/delivery-deliveries.jpg`
 
-- `delivery-app.png`
-- `market-pos.png`
-- `cafe-menus.png`
-- `pharmacy-systems.png`
-
-Recommended: ~1600×1000 or 16:10 landscape.
+## Market Cashier / AZ Market (desktop)
+- `cashier/cashier-pos.png`
+- `cashier/cashier-products.png`
+- `cashier/cashier-analysis.png`

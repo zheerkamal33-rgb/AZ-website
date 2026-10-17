@@ -14,10 +14,10 @@ export function About() {
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Zheer and Armand are computer science graduates who founded
-              Automated Zone to build software that operators actually use —
-              delivery platforms, market POS, cafe menus, pharmacy systems. Not
-              pitch-deck prototypes. Production apps with clear UX and solid
-              engineering, from two people you can call directly.
+              Automated Zone to build software operators actually use — a
+              two-sided delivery platform and AZ Market Cashier. Not pitch-deck
+              prototypes. Production apps with clear UX and solid engineering,
+              from two people you can call directly.
             </p>
           </Reveal>
 

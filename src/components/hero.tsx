@@ -18,7 +18,7 @@ export function Hero() {
           Automated Zone
         </p>
         <h1 className="az-hero-enter az-hero-enter-delay-1 mt-6 max-w-3xl font-display text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
-          CS grads who ship real systems — delivery, POS, menus, pharmacies.
+          CS grads who ship delivery platforms and market POS.
         </h1>
         <p className="az-hero-enter az-hero-enter-delay-2 mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
           Automated Zone is Zheer and Armand. We design and build production

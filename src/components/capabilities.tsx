@@ -2,16 +2,16 @@ import { Reveal } from "@/components/reveal";
 
 const items = [
   {
-    title: "Operational apps",
-    body: "Delivery flows, cashier systems, and day-to-day tools built for merchants, riders, and staff — not demo screens.",
+    title: "Delivery platforms",
+    body: "Two-sided ops — merchants create orders, riders pick up and deliver, customers receive. Built for real street-level coordination.",
   },
   {
-    title: "Customer-facing surfaces",
-    body: "Digital menus and clear interfaces that look sharp on the floor and stay easy to update.",
+    title: "Market POS",
+    body: "Cashier systems for markets — fast checkout, multi-currency, product catalogs, and sales analysis that belongs on the counter.",
   },
   {
-    title: "Domain systems",
-    body: "Pharmacy and retail-adjacent software shaped around real inventory, counter work, and reliability.",
+    title: "End-to-end craft",
+    body: "From interface to architecture. We design, build, and ship — then stand behind how it looks and how it runs.",
   },
 ];
 
@@ -27,8 +27,8 @@ export function Capabilities() {
             What we&apos;re known for.
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            End-to-end craft — from structure and interface to the engineering
-            that keeps things reliable after launch.
+            Production software for operators — sharp UX, solid engineering,
+            direct founders.
           </p>
         </Reveal>
 

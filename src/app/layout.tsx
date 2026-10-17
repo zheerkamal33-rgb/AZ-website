@@ -17,7 +17,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Automated Zone — Studio of Zheer & Armand",
   description:
-    "Automated Zone is Zheer and Armand — CS graduates who ship delivery apps, market POS, cafe menu systems, and pharmacy software. Browse the work and get in touch.",
+    "Automated Zone is Zheer and Armand — CS graduates who ship a delivery operations platform and AZ Market Cashier. Browse the work and get in touch.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
