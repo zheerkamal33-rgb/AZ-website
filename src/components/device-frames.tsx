@@ -115,100 +115,22 @@ export function MonitorFrame({
   );
 }
 
-/** Handheld USB/laser barcode scanner — reklamik product prop */
+/** Handheld USB laser barcode scanner — product-photo prop */
 export function BarcodeScanner({ className }: { className?: string }) {
   return (
     <div
       className={cn("az-scanner relative select-none", className)}
       aria-hidden
     >
-      <svg
-        viewBox="0 0 220 280"
-        className="h-auto w-full drop-shadow-[0_28px_40px_rgba(0,0,0,0.55)]"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="sc-body" x1="40" y1="20" x2="180" y2="240" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#3a4452" />
-            <stop offset="0.45" stopColor="#1c2430" />
-            <stop offset="1" stopColor="#0e131a" />
-          </linearGradient>
-          <linearGradient id="sc-grip" x1="90" y1="140" x2="160" y2="270" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#2a3340" />
-            <stop offset="1" stopColor="#121820" />
-          </linearGradient>
-          <linearGradient id="sc-nose" x1="30" y1="40" x2="120" y2="100" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#4a5565" />
-            <stop offset="1" stopColor="#1a222e" />
-          </linearGradient>
-          <radialGradient id="sc-laser" cx="0.5" cy="0.5" r="0.5">
-            <stop stopColor="#ff4d4d" stopOpacity="0.95" />
-            <stop offset="1" stopColor="#ff4d4d" stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        {/* USB cable */}
-        <path
-          d="M118 248 C118 268 95 275 72 268 C48 260 38 278 28 272"
-          stroke="#6b7788"
-          strokeWidth="5"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
-          d="M118 248 C118 268 95 275 72 268 C48 260 38 278 28 272"
-          stroke="#2a3340"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <rect x="18" y="266" width="18" height="10" rx="2" fill="#8a94a3" />
-        <rect x="20" y="268" width="10" height="6" rx="1" fill="#1a222e" />
-        {/* Head / nose */}
-        <path
-          d="M48 58 C42 42 52 28 78 24 L148 18 C168 16 182 28 178 48 L168 92 C164 108 148 118 128 120 L72 126 C54 128 46 110 48 92 Z"
-          fill="url(#sc-nose)"
-        />
-        {/* Scan window */}
-        <rect x="68" y="42" width="88" height="36" rx="6" fill="#0a0e14" stroke="#5a6575" strokeWidth="2" />
-        <rect x="74" y="48" width="76" height="24" rx="3" fill="#151c26" />
-        <line x1="78" y1="56" x2="146" y2="56" stroke="#ff3b3b" strokeWidth="2.5" opacity="0.85" />
-        <line x1="78" y1="64" x2="146" y2="64" stroke="#ff3b3b" strokeWidth="1.2" opacity="0.35" />
-        <ellipse cx="112" cy="60" rx="28" ry="10" fill="url(#sc-laser)" opacity="0.55" />
-        {/* Body shell */}
-        <path
-          d="M70 118 C66 112 68 104 78 100 L140 88 C154 84 166 94 164 110 L152 168 C150 180 138 188 124 190 L86 198 C72 200 64 188 66 174 Z"
-          fill="url(#sc-body)"
-        />
-        {/* Trigger */}
-        <path
-          d="M108 168 C108 168 118 172 124 186 C128 196 122 206 112 208 C102 210 96 200 98 190 C100 180 104 172 108 168 Z"
-          fill="#0ea894"
-        />
-        {/* Grip */}
-        <path
-          d="M96 188 C92 186 90 190 92 200 L108 262 C110 270 122 272 130 266 L148 248 C154 242 152 232 146 228 L118 196 C112 190 102 190 96 188 Z"
-          fill="url(#sc-grip)"
-        />
-        {/* Grip ridges */}
-        <path d="M112 210 L132 224" stroke="#4a5565" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
-        <path d="M116 222 L136 236" stroke="#4a5565" strokeWidth="2" strokeLinecap="round" opacity="0.45" />
-        <path d="M120 234 L138 246" stroke="#4a5565" strokeWidth="2" strokeLinecap="round" opacity="0.4" />
-        {/* Brand plate */}
-        <rect x="92" y="128" width="48" height="18" rx="3" fill="#0b1420" opacity="0.7" />
-        <text
-          x="116"
-          y="140"
-          textAnchor="middle"
-          fill="#1ad4c0"
-          fontFamily="ui-sans-serif, system-ui, sans-serif"
-          fontSize="8"
-          fontWeight="700"
-          letterSpacing="0.08em"
-        >
-          SCAN
-        </text>
-      </svg>
+      <Image
+        src="/work/cashier/barcode-scanner.png"
+        alt=""
+        width={607}
+        height={1036}
+        quality={92}
+        className="h-auto w-full drop-shadow-[0_28px_48px_rgba(0,0,0,0.7)]"
+        loading="lazy"
+      />
     </div>
   );
 }
