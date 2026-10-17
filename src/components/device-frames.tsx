@@ -38,6 +38,77 @@ export function PhoneFrame({
   );
 }
 
+export function TabletFrame({
+  src,
+  alt,
+  className,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className={cn("relative w-full max-w-xl", className)}>
+      <div className="relative overflow-hidden rounded-[1.35rem] border border-white/18 bg-[#121212] p-[0.55rem] shadow-[0_30px_70px_-24px_rgba(0,0,0,0.75)] ring-1 ring-white/10 sm:rounded-[1.6rem] sm:p-[0.65rem]">
+        <div className="pointer-events-none absolute left-1/2 top-[0.35rem] z-20 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-black/80 sm:top-[0.45rem]" />
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[0.95rem] bg-black sm:rounded-[1.1rem]">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes="(max-width: 1024px) 90vw, 520px"
+            className="object-cover object-top"
+            priority={priority}
+          />
+        </div>
+      </div>
+      <div className="mx-auto mt-1 h-1 w-[28%] rounded-full bg-white/15" />
+    </div>
+  );
+}
+
+/** Wide monitor / dual-panel desktop frame — distinct from LaptopFrame */
+export function MonitorFrame({
+  src,
+  alt,
+  className,
+  priority = false,
+  label = "az-clinic · dispense",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  priority?: boolean;
+  label?: string;
+}) {
+  return (
+    <div className={cn("relative w-full", className)}>
+      <div className="overflow-hidden rounded-md border border-[#2a4a55]/80 bg-[#071018] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.85)] ring-1 ring-[#7ec8c4]/25">
+        <div className="flex items-center gap-3 border-b border-[#1e3348] bg-[#0b1520] px-3 py-2">
+          <div className="h-2 w-2 rounded-sm bg-[#7ec8c4]/80" />
+          <div className="flex-1 truncate font-mono text-[10px] tracking-wide text-[#8aa0b5] sm:text-xs">
+            {label}
+          </div>
+        </div>
+        <div className="relative aspect-[16/10] bg-[#0b1520]">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 800px"
+            className="object-cover object-top"
+            priority={priority}
+          />
+        </div>
+      </div>
+      <div className="mx-auto h-3 w-[18%] bg-gradient-to-b from-[#1a2a35] to-[#0a1218]" />
+      <div className="mx-auto h-1.5 w-[42%] rounded-b-md bg-[#0a1218]" />
+    </div>
+  );
+}
+
 export function LaptopFrame({
   src,
   alt,

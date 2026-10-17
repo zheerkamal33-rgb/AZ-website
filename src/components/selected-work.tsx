@@ -1,4 +1,9 @@
-import { LaptopFrame, PhoneFrame } from "@/components/device-frames";
+import {
+  LaptopFrame,
+  MonitorFrame,
+  PhoneFrame,
+  TabletFrame,
+} from "@/components/device-frames";
 import { Reveal } from "@/components/reveal";
 
 export function SelectedWork() {
@@ -145,113 +150,96 @@ export function SelectedWork() {
           </div>
         </article>
 
-        {/* Cafe menu */}
+        {/* Cafe menu — tablet guest menu */}
         <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
-          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
             <Reveal>
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                Digital menus
+                Table-side tablet menu
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                 Cafe menu system
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
                 <span className="font-medium text-white/90">Problem — </span>
-                Cafes needed menus that stay current and look sharp — without
-                reprinting every price change.
+                Cafes needed a guest-facing menu waitstaff can bring to the
+                table — always current, never reprinted.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
                 <span className="font-medium text-white">Built — </span>
-                A mobile-friendly digital menu: categories, items, and live IQD
-                prices with KU · AR · EN — ready for customer screens.
+                An iPad digital menu for the table: categories, items, and live
+                IQD prices with KU · AR · EN — handed to guests like a menu,
+                updated like software.
               </p>
             </Reveal>
 
             <Reveal delayMs={100}>
-              <div className="az-stage relative mx-auto flex min-h-[22rem] items-end justify-center pb-4 sm:min-h-[26rem] md:min-h-[28rem]">
+              <div className="az-stage relative mx-auto min-h-[22rem] w-full max-w-2xl sm:min-h-[26rem] lg:min-h-[28rem]">
                 <div
-                  className="pointer-events-none absolute inset-x-8 bottom-0 h-24 rounded-[100%] bg-teal/15 blur-2xl"
+                  className="pointer-events-none absolute inset-x-10 bottom-2 h-24 rounded-[100%] bg-[#d4a574]/15 blur-2xl"
                   aria-hidden
                 />
-                <PhoneFrame
-                  src="/work/cafe/cafe-home.png"
-                  alt="Cafe menu categories"
-                  className="az-float-slow absolute left-[4%] top-[12%] z-10 -rotate-[14deg] opacity-90 sm:left-[8%] sm:top-[8%]"
+                <TabletFrame
+                  src="/work/cafe/cafe-tablet-home.png"
+                  alt="Cafe tablet menu categories"
+                  className="az-float-slow absolute left-0 top-[6%] z-10 w-[74%] -rotate-[9deg] sm:w-[70%]"
                 />
-                <PhoneFrame
-                  src="/work/cafe/cafe-items.png"
-                  alt="Cafe menu items list"
-                  className="az-float relative z-30"
-                />
-                <PhoneFrame
-                  src="/work/cafe/cafe-item.png"
-                  alt="Cafe menu item detail"
-                  className="az-float-slow absolute right-[2%] top-[18%] z-20 rotate-[12deg] opacity-95 sm:right-[6%] sm:top-[14%]"
+                <TabletFrame
+                  src="/work/cafe/cafe-tablet-items.png"
+                  alt="Cafe tablet coffee menu"
+                  className="az-float absolute right-0 top-[22%] z-20 w-[74%] rotate-[8deg] sm:w-[70%]"
+                  priority
                 />
               </div>
             </Reveal>
           </div>
         </article>
 
-        {/* Pharmacy */}
+        {/* Pharmacy — clinical dual-panel, not Cashier clone */}
         <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
             <Reveal className="order-2 lg:order-1">
-              <div className="az-stage relative">
+              <div className="az-stage relative overflow-visible pb-4 pt-2">
                 <div
-                  className="pointer-events-none absolute -inset-6 rounded-3xl bg-gradient-to-br from-teal/10 via-transparent to-[#3b82a0]/15 blur-xl"
+                  className="pointer-events-none absolute -inset-4 rounded-2xl bg-[radial-gradient(ellipse_at_30%_40%,rgba(126,200,196,0.16),transparent_55%)]"
                   aria-hidden
                 />
-                <LaptopFrame
-                  src="/work/pharmacy/pharmacy-inventory.png"
-                  alt="Pharmacy inventory"
-                  className="az-float relative z-20"
-                  chromeLabel="az-pharmacy · inventory"
-                />
-                <div className="pointer-events-none absolute -bottom-6 -right-2 z-30 hidden w-[48%] rotate-[6deg] sm:block md:-right-4 lg:-bottom-8">
-                  <div className="overflow-hidden rounded-lg border border-white/12 bg-[#121820] shadow-[0_24px_50px_-20px_rgba(0,0,0,0.65)] ring-1 ring-black/25">
-                    <div className="relative aspect-[16/10]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/work/pharmacy/pharmacy-rx.png"
-                        alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-top"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="pointer-events-none absolute -left-3 top-[18%] z-10 hidden w-[36%] -rotate-[8deg] opacity-90 md:block">
-                  <div className="overflow-hidden rounded-lg border border-white/10 bg-[#121820] shadow-xl ring-1 ring-black/20">
-                    <div className="relative aspect-[16/10]">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/work/pharmacy/pharmacy-counter.png"
-                        alt=""
-                        className="absolute inset-0 h-full w-full object-cover object-top"
-                      />
-                    </div>
-                  </div>
+                {/* Dual stacked monitors — different from Cashier laptop+overlays */}
+                <div className="relative grid gap-4 sm:grid-cols-[1.15fr_0.85fr] sm:items-end sm:gap-3">
+                  <MonitorFrame
+                    src="/work/pharmacy/pharmacy-ops.png"
+                    alt="Pharmacy Rx queue and dispense"
+                    className="az-float relative z-20"
+                    label="az-clinic · rx queue"
+                    priority
+                  />
+                  <MonitorFrame
+                    src="/work/pharmacy/pharmacy-stock.png"
+                    alt="Pharmacy stock and expiry watch"
+                    className="az-float-slow relative z-10 sm:mb-6 sm:origin-bottom sm:scale-[0.96]"
+                    label="az-clinic · stock & expiry"
+                  />
                 </div>
               </div>
             </Reveal>
 
             <Reveal delayMs={80} className="order-1 lg:order-2">
               <p className="text-xs font-medium tracking-wide text-teal uppercase">
-                Pharmacy operations
+                Clinical dispense ops
               </p>
               <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
                 Pharmacy system
               </h3>
               <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
                 <span className="font-medium text-white/90">Problem — </span>
-                Pharmacies needed software that respects inventory,
-                prescriptions, and day-to-day counter work.
+                Pharmacies needed software built around prescriptions, stock
+                expiry, and controlled drugs — not a generic checkout grid.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
                 <span className="font-medium text-white">Built — </span>
-                Inventory, prescription queue, and counter sales in one
-                operational system — structured for the workflows behind the
-                counter.
+                A clinical dispense console: Rx queue with lot/expiry checks,
+                stock watchlists, and counter workflows shaped for pharmacy
+                staff.
               </p>
             </Reveal>
           </div>
