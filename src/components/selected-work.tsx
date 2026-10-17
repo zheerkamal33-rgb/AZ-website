@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   BarcodeScanner,
   LaptopFrame,
@@ -220,6 +221,58 @@ export function SelectedWork() {
                 </span>
                 {t.pharmacyBuilt}
               </p>
+            </Reveal>
+          </div>
+        </article>
+
+        {/* Smart home — real photo of uni build */}
+        <article className="mt-24 border-t border-white/10 pt-16 sm:mt-28 lg:pt-20">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+            <Reveal>
+              <p className="text-xs font-medium tracking-wide text-teal uppercase">
+                {t.smartHomeEyebrow}
+              </p>
+              <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
+                {t.smartHomeTitle}
+              </h3>
+              <p className="mt-5 text-sm leading-relaxed text-white/60 sm:text-base">
+                <span className="font-medium text-white/90">
+                  {t.smartHomeProblemLabel}
+                </span>
+                {t.smartHomeProblem}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-white/75 sm:text-base">
+                <span className="font-medium text-white">
+                  {t.smartHomeBuiltLabel}
+                </span>
+                {t.smartHomeBuilt}
+              </p>
+            </Reveal>
+
+            <Reveal delayMs={100}>
+              <div className="az-stage relative mx-auto w-full max-w-xl pb-4">
+                <div
+                  className="pointer-events-none absolute -inset-4 rounded-2xl bg-[radial-gradient(ellipse_at_50%_80%,rgba(26,212,192,0.14),transparent_60%)]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute inset-x-10 bottom-0 h-20 rounded-[100%] bg-teal/10 blur-2xl"
+                  aria-hidden
+                />
+                <figure className="az-float relative z-20 overflow-hidden rounded-lg border border-white/12 bg-[#0a0e14] p-1.5 shadow-[0_32px_70px_-28px_rgba(0,0,0,0.75)] ring-1 ring-black/40 sm:p-2">
+                  <div className="relative aspect-[910/698] overflow-hidden rounded-md bg-black">
+                    <Image
+                      src="/work/smart-home/smart-home-gas-detection.jpg"
+                      alt="Smart Home and Gas Detection System — university project model"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 100vw, 560px"
+                      quality={92}
+                      priority
+                    />
+                  </div>
+                </figure>
+              </div>
             </Reveal>
           </div>
         </article>

@@ -48,6 +48,13 @@ export type Messages = {
   pharmacyBuiltLabel: string;
   pharmacyBuilt: string;
 
+  smartHomeEyebrow: string;
+  smartHomeTitle: string;
+  smartHomeProblemLabel: string;
+  smartHomeProblem: string;
+  smartHomeBuiltLabel: string;
+  smartHomeBuilt: string;
+
   capsEyebrow: string;
   capsTitle: string;
   capsIntro: string;
@@ -106,7 +113,7 @@ export const messages: Record<Lang, Messages> = {
     workEyebrow: "Work",
     workTitle: "Some projects of ours",
     workIntro:
-      "A handful of things we've built and put into use — delivery, market POS, cafe menus, and pharmacy tools.",
+      "A handful of things we've built — delivery, market POS, cafe menus, pharmacy tools, and a uni smart-home project we're proud of.",
 
     deliveryEyebrow: "Two-sided delivery platform",
     deliveryTitle: "Delivery operations app",
@@ -143,6 +150,15 @@ export const messages: Record<Lang, Messages> = {
     pharmacyBuiltLabel: "Built — ",
     pharmacyBuilt:
       "A clinical dispense console: Rx queue with lot/expiry checks, stock watchlists, and counter workflows shaped for pharmacy staff.",
+
+    smartHomeEyebrow: "University CS project",
+    smartHomeTitle: "Smart Home and Gas Detection System",
+    smartHomeProblemLabel: "Problem — ",
+    smartHomeProblem:
+      "We wanted a full smart-house build for uni — not just a demo on a breadboard — that could watch for gas leaks and control access for real.",
+    smartHomeBuiltLabel: "Built — ",
+    smartHomeBuilt:
+      "A complete house model with gas detection, RFID access, an LCD status display, and sensors wired to a microcontroller — shown at our CS exhibition.",
 
     capsEyebrow: "What we do",
     capsTitle: "Websites, apps, and systems — for anyone.",
@@ -213,7 +229,7 @@ export const messages: Record<Lang, Messages> = {
     workEyebrow: "کارەکان",
     workTitle: "هەندێک لە پڕۆژەکانمان",
     workIntro:
-      "چەند شتێک کە دروستمان کردوون و خەڵک بەکاریان دەهێنن — گەیاندن، سیستەمی فرۆشتنی بازاڕ، مێنیوی کافێ، و ئامرازی دەرمانخانە.",
+      "چەند شتێک کە دروستمان کردوون — گەیاندن، سیستەمی فرۆشتنی بازاڕ، مێنیوی کافێ، ئامرازی دەرمانخانە، و پڕۆژەیەکی زانکۆی ماڵی زیرەک کە شانازی پێوە دەکەین.",
 
     deliveryEyebrow: "پلاتفۆرمی گەیاندنی دوو لایەنە",
     deliveryTitle: "ئەپی کارەکانی گەیاندن",
@@ -250,6 +266,15 @@ export const messages: Record<Lang, Messages> = {
     pharmacyBuiltLabel: "ئەنجام — ",
     pharmacyBuilt:
       "کۆنسۆڵی دابەشکردنی کلینیکی: ڕیزی ڕەچەتە لەگەڵ پشکنینی لۆت و بەسەرچوون، لیستی چاودێری کۆگا، و ڕێڕەوی کار بۆ ستافی دەرمانخانە.",
+
+    smartHomeEyebrow: "پڕۆژەی زانکۆ · زانستی کۆمپیوتەر",
+    smartHomeTitle: "سیستەمی ماڵی زیرەک و دۆزینەوەی گاز",
+    smartHomeProblemLabel: "کێشە — ",
+    smartHomeProblem:
+      "دەمانویست بۆ زانکۆ ماڵێکی زیرەکی تەواو دروست بکەین — نەک تەنها نموونەیەک لەسەر بۆردی تاقیکردنەوە — کە دۆزینەوەی گاز و کۆنترۆڵی دەروازە بەڕاستی بکات.",
+    smartHomeBuiltLabel: "ئەنجام — ",
+    smartHomeBuilt:
+      "مۆدێلی تەواوی ماڵێک لەگەڵ دۆزینەوەی گاز، دەروازەی RFID، شاشەی LCD بۆ دۆخ، و هەستەوەر بەستراو بە مایکرۆکۆنترۆڵەر — لە پێشانگای زانستی کۆمپیوتەر پیشان درا.",
 
     capsEyebrow: "چی دەکەین",
     capsTitle: "وێبسایت، ئەپ و سیستەم — بۆ هەموو کەس.",
