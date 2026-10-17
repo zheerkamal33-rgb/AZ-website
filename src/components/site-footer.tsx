@@ -1,5 +1,6 @@
 "use client";
 
+import { BrandMark } from "@/components/brand-mark";
 import { useLanguage } from "@/components/language-provider";
 import { LatinText } from "@/components/latin-text";
 
@@ -10,12 +11,15 @@ export function SiteFooter() {
     <footer className="az-cv border-t border-slate-line bg-white text-ink">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-end sm:justify-between sm:px-8">
         <div>
-          <p
-            lang="en"
-            className="az-latin font-display text-lg font-semibold text-ink"
-          >
-            {t.brand}
-          </p>
+          <div className="flex items-center gap-2.5">
+            <BrandMark variant="ink" size={28} className="h-7 w-7 opacity-90" />
+            <p
+              lang="en"
+              className="az-latin font-display text-lg font-semibold text-ink"
+            >
+              {t.brand}
+            </p>
+          </div>
           <p className="mt-2 max-w-sm text-sm text-muted-foreground">
             <LatinText text={t.footerBlurb} />
           </p>

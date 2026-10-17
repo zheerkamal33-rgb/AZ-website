@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { BrandMark } from "@/components/brand-mark";
 import { useLanguage } from "@/components/language-provider";
 import { cn } from "@/lib/utils";
 
@@ -39,10 +40,18 @@ export function SiteNav() {
       <nav className="pointer-events-auto relative z-10 mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
         <a
           href="#home"
-          className="az-brand relative z-10 text-white"
+          className="az-brand relative z-10 inline-flex items-center gap-2.5 text-white"
+          aria-label={t.brand}
           onClick={() => setOpen(false)}
         >
-          Automated Zone
+          <BrandMark
+            variant="white"
+            size={32}
+            className="h-7 w-7 sm:h-8 sm:w-8"
+          />
+          <span lang="en" className="az-latin">
+            Automated Zone
+          </span>
         </a>
 
         <div className="relative z-10 flex items-center gap-3 sm:gap-4 md:gap-6">
