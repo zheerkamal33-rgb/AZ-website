@@ -17,12 +17,24 @@ const areaClass =
 
 const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
 
+function composeBody(name: string, email: string, message: string) {
+  return [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    ``,
+    message,
+  ].join("\n");
+}
+
 export function ContactForm() {
   const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
   const [redirectTo, setRedirectTo] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  const fromNameRef = useRef<HTMLInputElement>(null);
+  const replyToRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -49,11 +61,12 @@ export function ContactForm() {
 
     const body = new URLSearchParams({
       access_key: web3Key,
-      name: payload.name,
-      email: payload.email,
-      message: payload.message,
-      subject: `Automated Zone contact — ${payload.name}`,
-      from_name: "Automated Zone",
+      // Explicit labels Web3Forms shows in the inbox email
+      Name: payload.name,
+      Email: payload.email,
+      Message: composeBody(payload.name, payload.email, payload.message),
+      subject: `Contact from ${payload.name} (${payload.email})`,
+      from_name: payload.name,
       replyto: payload.email,
       botcheck: "false",
     });
@@ -134,8 +147,17 @@ export function ContactForm() {
       setStatus("success");
       form.reset();
     } catch {
-      // Datacenter / CORS edge cases: fall back to classic browser POST (always delivers).
+      // Classic POST fallback — stamp name/email into the payload first
       if (web3Key && formRef.current) {
+        if (fromNameRef.current) fromNameRef.current.value = name;
+        if (replyToRef.current) replyToRef.current.value = email;
+        if (subjectRef.current) {
+          subjectRef.current.value = `Contact from ${name} (${email})`;
+        }
+        const msgEl = formRef.current.elements.namedItem(
+          "message",
+        ) as HTMLTextAreaElement | null;
+        if (msgEl) msgEl.value = composeBody(name, email, message);
         formRef.current.submit();
         return;
       }
@@ -177,11 +199,18 @@ export function ContactForm() {
         <>
           <input type="hidden" name="access_key" value={web3Key} />
           <input
+            ref={subjectRef}
             type="hidden"
             name="subject"
-            value="Automated Zone contact form"
+            defaultValue="Automated Zone contact form"
           />
-          <input type="hidden" name="from_name" value="Automated Zone" />
+          <input
+            ref={fromNameRef}
+            type="hidden"
+            name="from_name"
+            defaultValue="Automated Zone visitor"
+          />
+          <input ref={replyToRef} type="hidden" name="replyto" defaultValue="" />
           {redirectTo ? (
             <input type="hidden" name="redirect" value={redirectTo} />
           ) : null}
