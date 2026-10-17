@@ -129,9 +129,10 @@
       linear-gradient(165deg, var(--ink) 0%, var(--ink-soft) 55%, #0e1c2e 100%);
   }
 
+  /* Always visible — never hide Work/content behind IntersectionObserver */
   .az-reveal {
-    opacity: 0;
-    transform: translateY(18px);
+    opacity: 1;
+    transform: none;
     transition:
       opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
@@ -139,7 +140,7 @@
 
   .az-reveal.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 
   .az-hero-enter {
