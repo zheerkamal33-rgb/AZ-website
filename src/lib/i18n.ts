@@ -53,6 +53,10 @@ export type Messages = {
   uniProjectName: string;
   uniBody: string;
 
+  gameEyebrow: string;
+  gameBody: string;
+  gameCta: string;
+
   capsEyebrow: string;
   capsTitle: string;
   capsIntro: string;
@@ -154,6 +158,11 @@ export const messages: Record<Lang, Messages> = {
     uniProjectName: "Smart Home and Gas Detection System",
     uniBody:
       "For our Computer Science degree we built a full smart-house prototype — gas detection, RFID access, an LCD status display, and sensors on a microcontroller. Not a breadboard demo. A complete model we showed at the CS exhibition.",
+
+    gameEyebrow: "Also, for fun",
+    gameBody:
+      "We made a little browser game when we felt like building something just to play. No brief. No client. Just for fun.",
+    gameCta: "Play the game",
 
     capsEyebrow: "What we do",
     capsTitle: "Websites, apps, and systems — for anyone.",
@@ -267,6 +276,11 @@ export const messages: Record<Lang, Messages> = {
     uniProjectName: "سیستەمی ماڵی زیرەک و دۆزینەوەی گاز",
     uniBody:
       "بۆ خوێندنی زانستی کۆمپیوتەر مۆدێلی تەواوی ماڵێکی زیرەکمان دروست کرد — دۆزینەوەی گاز، دەروازەی RFID، شاشەی LCD بۆ دۆخ، و هەستەوەر لەسەر مایکرۆکۆنترۆڵەر. نەک نموونەی بۆردی تاقیکردنەوە. مۆدێلێکی تەواو کە لە پێشانگای زانستی کۆمپیوتەر پیشانمان دا.",
+
+    gameEyebrow: "هەروەها، بۆ خۆشی",
+    gameBody:
+      "یارییەکی بچووکی وێبمان دروست کرد کاتێک حەزمان لێ بوو شتێک تەنها بۆ یاریکردن دروست بکەین. بێ داواکاری. بێ کڕیار. تەنها بۆ خۆشی.",
+    gameCta: "یاری بکە",
 
     capsEyebrow: "چی دەکەین",
     capsTitle: "وێبسایت، ئەپ و سیستەم — بۆ هەموو کەس.",

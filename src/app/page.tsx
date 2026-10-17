@@ -1,6 +1,7 @@
 import { About } from "@/components/about";
 import { Capabilities } from "@/components/capabilities";
 import { Contact } from "@/components/contact";
+import { ForFun } from "@/components/for-fun";
 import { Hero } from "@/components/hero";
 import { SelectedWork } from "@/components/selected-work";
 import { SiteFooter } from "@/components/site-footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <SelectedWork />
         <Capabilities />
         <UniBuild />
+        <ForFun />
         <About />
         <Contact />
       </main>
