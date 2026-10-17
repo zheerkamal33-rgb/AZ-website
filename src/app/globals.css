@@ -56,49 +56,46 @@
 }
 
 :root {
-  /* Automated Zone — deep ink + gold accent
-     REVERT THEME: git revert <this-commit>  OR restore teal:
-     --teal #1ad4c0 / --teal-deep #0ea894 / --ink-soft #1a2740
-     and undo gold hardcodes in selected-work + scanner SVG. */
+  /* Automated Zone — deep ink + electric teal */
   --ink: #0b1420;
-  --ink-soft: #1c1a14;
-  --mist: #f5f3ef;
-  --teal: #d4a84b;
-  --teal-deep: #b8892f;
-  --slate-line: #d4cfc4;
+  --ink-soft: #1a2740;
+  --mist: #f3f6f9;
+  --teal: #1ad4c0;
+  --teal-deep: #0ea894;
+  --slate-line: #c8d2de;
 
-  --background: #f5f3ef;
+  --background: #f3f6f9;
   --foreground: #0b1420;
   --card: #ffffff;
   --card-foreground: #0b1420;
   --popover: #ffffff;
   --popover-foreground: #0b1420;
   --primary: #0b1420;
-  --primary-foreground: #f5f3ef;
-  --secondary: #ebe6dc;
+  --primary-foreground: #f3f6f9;
+  --secondary: #e6ecf2;
   --secondary-foreground: #0b1420;
-  --muted: #ebe6dc;
-  --muted-foreground: #5c5648;
-  --accent: #d4a84b;
+  --muted: #e6ecf2;
+  --muted-foreground: #5a6b7d;
+  --accent: #1ad4c0;
   --accent-foreground: #0b1420;
   --destructive: oklch(0.55 0.2 25);
-  --border: #d4cfc4;
-  --input: #d4cfc4;
-  --ring: #d4a84b;
-  --chart-1: #d4a84b;
-  --chart-2: #1c1a14;
-  --chart-3: #5c5648;
-  --chart-4: #b8892f;
+  --border: #c8d2de;
+  --input: #c8d2de;
+  --ring: #1ad4c0;
+  --chart-1: #1ad4c0;
+  --chart-2: #1a2740;
+  --chart-3: #5a6b7d;
+  --chart-4: #0ea894;
   --chart-5: #0b1420;
   --radius: 0.5rem;
-  --sidebar: #f5f3ef;
+  --sidebar: #f3f6f9;
   --sidebar-foreground: #0b1420;
   --sidebar-primary: #0b1420;
-  --sidebar-primary-foreground: #f5f3ef;
-  --sidebar-accent: #ebe6dc;
+  --sidebar-primary-foreground: #f3f6f9;
+  --sidebar-accent: #e6ecf2;
   --sidebar-accent-foreground: #0b1420;
-  --sidebar-border: #d4cfc4;
-  --sidebar-ring: #d4a84b;
+  --sidebar-border: #c8d2de;
+  --sidebar-ring: #1ad4c0;
 }
 
 @layer base {
@@ -269,8 +266,8 @@ header.az-menu-open .az-burger-3 {
   .az-hero-wash {
     background:
       radial-gradient(ellipse 80% 60% at 70% 40%, color-mix(in srgb, var(--teal) 28%, transparent), transparent 55%),
-      radial-gradient(ellipse 50% 40% at 15% 80%, color-mix(in srgb, #c4a35a 30%, transparent), transparent 50%),
-      linear-gradient(165deg, var(--ink) 0%, var(--ink-soft) 55%, #16130e 100%);
+      radial-gradient(ellipse 50% 40% at 15% 80%, color-mix(in srgb, #3b82a0 35%, transparent), transparent 50%),
+      linear-gradient(165deg, var(--ink) 0%, var(--ink-soft) 55%, #0e1c2e 100%);
   }
 
   /* Always visible — never hide Work/content behind IntersectionObserver */

@@ -231,7 +231,7 @@ export function BarcodeScanner({ className }: { className?: string }) {
         />
         <path
           d="M108 168 C108 168 118 172 124 186 C128 196 122 206 112 208 C102 210 96 200 98 190 C100 180 104 172 108 168 Z"
-          fill="#d4a84b"
+          fill="#0ea894"
         />
         <path
           d="M96 188 C92 186 90 190 92 200 L108 262 C110 270 122 272 130 266 L148 248 C154 242 152 232 146 228 L118 196 C112 190 102 190 96 188 Z"
@@ -271,7 +271,7 @@ export function BarcodeScanner({ className }: { className?: string }) {
           x="116"
           y="140"
           textAnchor="middle"
-          fill="#d4a84b"
+          fill="#1ad4c0"
           fontFamily="ui-sans-serif, system-ui, sans-serif"
           fontSize="8"
           fontWeight="700"
