@@ -5,6 +5,7 @@ import { Hero } from "@/components/hero";
 import { SelectedWork } from "@/components/selected-work";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
+import { UniBuild } from "@/components/uni-build";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <SelectedWork />
         <Capabilities />
+        <UniBuild />
         <About />
         <Contact />
       </main>
