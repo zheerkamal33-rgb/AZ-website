@@ -16,7 +16,11 @@ const fieldClass =
 const areaClass =
   "min-h-32 rounded-none border-0 border-b border-white/20 bg-transparent px-0 text-base text-white shadow-none placeholder:text-white/35 focus-visible:border-teal focus-visible:ring-0 focus-visible:ring-offset-0 disabled:bg-transparent md:text-base";
 
-const web3Key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
+// Web3Forms access keys are public client-side identifiers. Keep the environment
+// override for other deployments and use this form's key by default on Vercel.
+const web3Key =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim() ||
+  "7f215aa2-7656-4de2-92da-bceb6d8076bd";
 
 export function ContactForm() {
   const { t } = useLanguage();
