@@ -56,5 +56,5 @@ GMAIL_APP_PASSWORD=your-16-char-app-password
 ## Contact
 
 - Zheer — zheerkamal33@gmail.com
-- Armand — armandsoran1@gmail.com
+- Armand — armandsoran820@gmail.com
 - Studio — automated.zoneaz@gmail.com

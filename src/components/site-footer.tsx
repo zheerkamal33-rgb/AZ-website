@@ -36,10 +36,10 @@ export function SiteFooter() {
             Zheer — zheerkamal33@gmail.com
           </a>
           <a
-            href="mailto:armandsoran1@gmail.com"
+            href="mailto:armandsoran820@gmail.com"
             className="az-latin text-ink/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
           >
-            Armand — armandsoran1@gmail.com
+            Armand — armandsoran820@gmail.com
           </a>
         </div>
       </div>
