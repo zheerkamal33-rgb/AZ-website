@@ -25,7 +25,7 @@ export function UniBuild() {
 
         <Reveal delayMs={100} className="relative isolate mt-28 sm:mt-36 lg:mt-12">
           <figure
-            className="az-float-slow pointer-events-none absolute right-2 -top-16 z-0 w-48 rotate-[7deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:right-4 sm:-top-24 sm:w-64 lg:right-8 lg:-top-28 lg:w-72"
+            className="az-float-slow pointer-events-none absolute right-2 -top-20 z-0 w-48 rotate-[7deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:right-4 sm:-top-28 sm:w-64 lg:right-8 lg:-top-32 lg:w-72"
             aria-hidden="true"
           >
             <Image
