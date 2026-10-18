@@ -52,6 +52,10 @@ export type Messages = {
   uniTitle: string;
   uniProjectName: string;
   uniBody: string;
+  attendanceName: string;
+  attendanceBody: string;
+  attendancePolicy: string;
+  attendanceFeatures: string[];
 
   gameEyebrow: string;
   gameTitle: string;
@@ -156,7 +160,18 @@ export const messages: Record<Lang, Messages> = {
       "A clinical dispense console: Rx queue with lot/expiry checks, stock watchlists, and counter workflows shaped for pharmacy staff.",
 
     uniEyebrow: "From uni",
-    uniTitle: "A build we're proud of.",
+    uniTitle: "Builds we’re proud of.",
+    attendanceName: "AttendFP — Fingerprint Attendance",
+    attendanceBody:
+      "Built for the University of Sulaimani, AttendFP replaces paper registers with verified fingerprint scans. An R307 sensor and Raspberry Pi Pico 2 W capture attendance, a Python serial bridge records it in Firebase Firestore, and a Node.js/Express API powers a live React dashboard for instructors and admins.",
+    attendancePolicy:
+      "The university’s 90% attendance rule is built in: students below the threshold are flagged as failing attendance, regardless of exam marks.",
+    attendanceFeatures: [
+      "Fingerprint verification to prevent proxy attendance",
+      "Student, subject and session management",
+      "Marks from Excellent to Fail, with CSV and PDF reports",
+      "Gemini assistant for questions about live attendance and marks",
+    ],
     uniProjectName: "Smart Home and Gas Detection System",
     uniBody:
       "For our Computer Science degree we built a full smart-house prototype — gas detection, RFID access, an LCD status display, and sensors on a microcontroller. Not a breadboard demo. A complete model we showed at the CS exhibition.",
@@ -276,7 +291,18 @@ export const messages: Record<Lang, Messages> = {
       "کۆنسۆڵی دابەشکردنی کلینیکی: ڕیزی ڕەچەتە لەگەڵ پشکنینی لۆت و بەسەرچوون، لیستی چاودێری کۆگا، و ڕێڕەوی کار بۆ ستافی دەرمانخانە.",
 
     uniEyebrow: "لە زانکۆوە",
-    uniTitle: "دروستکردنێک کە شانازی پێوە دەکەین.",
+    uniTitle: "بەرهەمەکانێک کە شانازییان پێوە دەکەین.",
+    attendanceName: "AttendFP — ئامادەبوون بە پەنجەمۆر",
+    attendanceBody:
+      "بۆ زانکۆی سلێمانی دروستکراوە، AttendFP تۆماری کاغەزی بە پشکنینی پەنجەمۆر دەگۆڕێتەوە. هەستەوەری R307 و Raspberry Pi Pico 2 W ئامادەبوون تۆمار دەکەن؛ بەرنامەیەکی Python داتاکان دەنووسێتە Firebase Firestore، و API ـی Node.js/Express داشبۆردێکی ڕاستەوخۆی React بۆ مامۆستا و بەڕێوەبەر دابین دەکات.",
+    attendancePolicy:
+      "یاسای ئامادەبوونی ٩٠٪ی زانکۆ جێبەجێ دەکات: خوێندکاری خوار ئەم ڕێژەیە، بەبێ گوێدان بە نمرەی تاقیکردنەوە، لە ئامادەبوون بە نەدەرچوو نیشان دەدرێت.",
+    attendanceFeatures: [
+      "پشتڕاستکردنەوە بە پەنجەمۆر بۆ ڕێگریکردن لە ئامادەبوونی ساختە",
+      "بەڕێوەبردنی خوێندکار، بابەت و دانیشتنەکان",
+      "نمرە لە نایابەوە تا نەدەرچوو، لەگەڵ ڕاپۆرتی CSV و PDF",
+      "یاریدەدەری Gemini بۆ پرسیار لەسەر ئامادەبوون و نمرەی ڕاستەوخۆ",
+    ],
     uniProjectName: "سیستەمی ماڵی زیرەک و دۆزینەوەی گاز",
     uniBody:
       "بۆ خوێندنی زانستی کۆمپیوتەر مۆدێلی تەواوی ماڵێکی زیرەکمان دروست کرد — دۆزینەوەی گاز، دەروازەی RFID، شاشەی LCD بۆ دۆخ، و هەستەوەر لەسەر مایکرۆکۆنترۆڵەر. نەک نموونەی بۆردی تاقیکردنەوە. مۆدێلێکی تەواو کە لە پێشانگای زانستی کۆمپیوتەر پیشانمان دا.",
