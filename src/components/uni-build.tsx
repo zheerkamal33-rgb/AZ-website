@@ -23,24 +23,22 @@ export function UniBuild() {
           </h2>
         </Reveal>
 
-        <Reveal delayMs={100}>
-          <article className="relative isolate mt-12 grid overflow-hidden rounded-2xl border border-slate-line bg-white p-6 shadow-sm sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
-            <figure
-              className="az-float-slow pointer-events-none absolute -right-16 -top-16 z-0 w-48 rotate-[7deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-20 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:-right-10 sm:-top-24 sm:w-64 sm:opacity-35 lg:-right-12 lg:-top-28 lg:w-72 lg:opacity-75"
-              aria-hidden="true"
-            >
-              <Image
-                src="/work/attendance/attendfp-ai.png"
-                alt=""
-                width={992}
-                height={1586}
-                className="h-auto w-full"
-                sizes="(max-width: 640px) 192px, (max-width: 1024px) 256px, 288px"
-                quality={90}
-              />
-            </figure>
-            <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-white via-white/95 to-white/25 lg:via-white/90 lg:to-transparent" aria-hidden="true" />
-
+        <Reveal delayMs={100} className="relative isolate mt-28 sm:mt-36 lg:mt-12">
+          <figure
+            className="az-float-slow pointer-events-none absolute right-2 -top-16 z-0 w-48 rotate-[7deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:right-4 sm:-top-24 sm:w-64 lg:right-8 lg:-top-28 lg:w-72"
+            aria-hidden="true"
+          >
+            <Image
+              src="/work/attendance/attendfp-ai.png"
+              alt=""
+              width={992}
+              height={1586}
+              className="h-auto w-full"
+              sizes="(max-width: 640px) 192px, (max-width: 1024px) 256px, 288px"
+              quality={90}
+            />
+          </figure>
+          <article className="relative z-10 grid overflow-hidden rounded-2xl border border-slate-line bg-white p-6 shadow-sm sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
             <div className="relative z-10 lg:pr-4">
               <Fingerprint className="h-10 w-10 text-teal-deep" aria-hidden="true" />
               <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
