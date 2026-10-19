@@ -19,7 +19,7 @@ function escapeHtml(s: string) {
 
 function buildBodies({ name, email, message }: ContactPayload) {
   const text = [
-    `New message from the Automated Zone site`,
+    `New message from the RozhEx site`,
     ``,
     `Name: ${name}`,
     `Email: ${email}`,
@@ -29,7 +29,7 @@ function buildBodies({ name, email, message }: ContactPayload) {
 
   const html = `
     <div style="font-family:system-ui,sans-serif;line-height:1.5;color:#0b1420">
-      <p style="margin:0 0 12px"><strong>New message from the Automated Zone site</strong></p>
+      <p style="margin:0 0 12px"><strong>New message from the RozhEx site</strong></p>
       <p style="margin:0 0 4px"><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p style="margin:0 0 16px"><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
       <div style="white-space:pre-wrap;border-top:1px solid #c8d2de;padding-top:16px">${escapeHtml(message)}</div>
@@ -46,7 +46,7 @@ async function sendWithResend(payload: ContactPayload) {
   const { text, html } = buildBodies(payload);
   const from =
     process.env.RESEND_FROM?.trim() ||
-    "Automated Zone <onboarding@resend.dev>";
+    "RozhEx <onboarding@resend.dev>";
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -58,7 +58,7 @@ async function sendWithResend(payload: ContactPayload) {
       from,
       to: [CONTACT_TO],
       reply_to: payload.email,
-      subject: `Automated Zone contact — ${payload.name}`,
+      subject: `RozhEx contact — ${payload.name}`,
       text,
       html,
     }),
@@ -87,10 +87,10 @@ async function sendWithGmail(payload: ContactPayload) {
   });
 
   await transporter.sendMail({
-    from: `"Automated Zone" <${user}>`,
+    from: `"RozhEx" <${user}>`,
     to: CONTACT_TO,
     replyTo: `"${payload.name}" <${payload.email}>`,
-    subject: `Automated Zone contact — ${payload.name}`,
+    subject: `RozhEx contact — ${payload.name}`,
     text,
     html,
   });

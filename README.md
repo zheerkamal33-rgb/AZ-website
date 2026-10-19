@@ -1,6 +1,6 @@
-# Automated Zone
+# RozhEx
 
-Portfolio site for **Automated Zone** — the studio of Zheer and Armand. Showcases selected work, who we are, and how to get in touch.
+Portfolio site for **RozhEx** — the studio of Zheer and Armand. Showcases selected work, who we are, and how to get in touch.
 
 ## Stack
 

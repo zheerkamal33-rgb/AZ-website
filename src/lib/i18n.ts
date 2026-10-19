@@ -110,11 +110,11 @@ export const messages: Record<Lang, Messages> = {
     navContact: "Contact",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    brand: "Automated Zone",
+    brand: "RozhEx",
 
     heroHeadline: "CS students who build websites, apps, and systems.",
     heroBody:
-      "Automated Zone is Zheer and Armand. We design and build software for whoever needs it — websites, apps, systems, the whole range. Have a look at some of our work, then say hello.",
+      "RozhEx is Zheer and Armand. We design and build software for whoever needs it — websites, apps, systems, the whole range. Have a look at some of our work, then say hello.",
     heroCtaWork: "See our work",
     heroCtaContact: "Say hello",
 
@@ -200,7 +200,7 @@ export const messages: Record<Lang, Messages> = {
     aboutEyebrow: "About",
     aboutTitle: "Two CS students. Real software.",
     aboutBody:
-      "Zheer and Armand are computer science students who started Automated Zone to build software people actually use. We take on websites, apps, and systems for whoever needs them — and we've already put real projects out into the world. Reach us by email; we're the ones doing the work.",
+      "Zheer and Armand are computer science students who started RozhEx to build software people actually use. We take on websites, apps, and systems for whoever needs them — and we've already put real projects out into the world. Reach us by email; we're the ones doing the work.",
     aboutZheerRole:
       "Co-founder, CS student — more on the backend: APIs, data, servers, and making sure things run correctly behind the scenes.",
     aboutArmandRole:
@@ -230,7 +230,7 @@ export const messages: Record<Lang, Messages> = {
 
     footerBlurb:
       "Zheer & Armand — CS students building websites, apps, and systems.",
-    footerCopy: "© 2026 Automated Zone. Built by Zheer & Armand.",
+    footerCopy: "© 2026 RozhEx. Built by Zheer & Armand.",
   },
 
   ku: {
@@ -240,12 +240,12 @@ export const messages: Record<Lang, Messages> = {
     navContact: "پەیوەندی",
     openMenu: "کردنەوەی لیستە",
     closeMenu: "داخستنی لیستە",
-    brand: "Automated Zone",
+    brand: "RozhEx",
 
     heroHeadline:
       "خوێندکاری زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
     heroBody:
-      "Automated Zone بریتییە لە Zheer و Armand. نەرمەکاڵا دیزاین دەکەین و دروست دەکەین بۆ هەر کەسێک کە پێویستی پێیە — وێبسایت، ئەپ، سیستەم، هەموو جۆرێک. چەند کارێکمان ببینە، پاشان سڵاو بڵێ.",
+      "RozhEx بریتییە لە Zheer و Armand. نەرمەکاڵا دیزاین دەکەین و دروست دەکەین بۆ هەر کەسێک کە پێویستی پێیە — وێبسایت، ئەپ، سیستەم، هەموو جۆرێک. چەند کارێکمان ببینە، پاشان سڵاو بڵێ.",
     heroCtaWork: "بینینی کارەکان",
     heroCtaContact: "سڵاو بڵێ",
 
@@ -331,7 +331,7 @@ export const messages: Record<Lang, Messages> = {
     aboutEyebrow: "دەربارەمان",
     aboutTitle: "دوو خوێندکاری زانستی کۆمپیوتەر. نەرمەکاڵای ڕاستەقینە.",
     aboutBody:
-      "Zheer و Armand خوێندکاری زانستی کۆمپیوتەرن کە Automated Zoneیان دەستپێکرد بۆ دروستکردنی نەرمەکاڵا کە خەڵک بەڕاستی بەکاری دەهێنن. وێبسایت، ئەپ و سیستەم بۆ هەر کەسێک دروست دەکەین کە پێویستی پێیە — و پێشتر پڕۆژەی ڕاستەقینەمان ناردووەتە دەرەوە. بە ئیمەیڵ پەیوەندیمان پێوە بکە؛ ئێمە خودی کارەکە دەکەین.",
+      "Zheer و Armand خوێندکاری زانستی کۆمپیوتەرن کە RozhExیان دەستپێکرد بۆ دروستکردنی نەرمەکاڵا کە خەڵک بەڕاستی بەکاری دەهێنن. وێبسایت، ئەپ و سیستەم بۆ هەر کەسێک دروست دەکەین کە پێویستی پێیە — و پێشتر پڕۆژەی ڕاستەقینەمان ناردووەتە دەرەوە. بە ئیمەیڵ پەیوەندیمان پێوە بکە؛ ئێمە خودی کارەکە دەکەین.",
     aboutZheerRole:
       "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — زیاتر لە لایەنی سێرڤەر و پشتەوە: API، داتا، و دڵنیابوون لەوەی شتەکان ڕاست کار دەکەن.",
     aboutArmandRole:
@@ -361,6 +361,6 @@ export const messages: Record<Lang, Messages> = {
 
     footerBlurb:
       "Zheer و Armand — خوێندکاری زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
-    footerCopy: "© 2026 Automated Zone. دروستکراوە لەلایەن Zheer و Armand.",
+    footerCopy: "© 2026 RozhEx. دروستکراوە لەلایەن Zheer و Armand.",
   },
 };

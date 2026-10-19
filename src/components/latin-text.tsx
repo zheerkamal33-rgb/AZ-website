@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 
 /** Product / brand / name Latin tokens that stay English in KU copy. */
 const LATIN_TOKEN =
-  /(Automated Zone|AZ Market Cashier|AZ Market|Market Cashier|Zheer|Armand)/g;
+  /(RozhEx|AZ Market Cashier|AZ Market|Market Cashier|Zheer|Armand)/g;
 const LATIN_SET = new Set([
-  "Automated Zone",
+  "RozhEx",
   "AZ Market Cashier",
   "AZ Market",
   "Market Cashier",

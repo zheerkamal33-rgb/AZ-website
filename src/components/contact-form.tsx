@@ -63,7 +63,7 @@ export function ContactForm() {
       email: payload.email,
       message: payload.message,
       subject: `${payload.name} · ${payload.email}`,
-      from_name: "Automated Zone",
+      from_name: "RozhEx",
       replyto: payload.email,
     };
 
@@ -157,7 +157,7 @@ export function ContactForm() {
       form.reset();
     } catch {
       if (web3Key && formRef.current) {
-        // Keep from_name as Automated Zone (hidden input); only stamp reply/subject.
+        // Keep from_name as RozhEx (hidden input); only stamp reply/subject.
         if (replyToRef.current) replyToRef.current.value = email;
         if (subjectRef.current) {
           subjectRef.current.value = `${name} · ${email}`;
@@ -208,7 +208,7 @@ export function ContactForm() {
             name="subject"
             defaultValue="New contact"
           />
-          <input type="hidden" name="from_name" value="Automated Zone" readOnly />
+          <input type="hidden" name="from_name" value="RozhEx" readOnly />
           <input ref={replyToRef} type="hidden" name="replyto" defaultValue="" />
           {redirectTo ? (
             <input type="hidden" name="redirect" value={redirectTo} />
