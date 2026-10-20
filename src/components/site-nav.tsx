@@ -44,7 +44,7 @@ export function SiteNav() {
           aria-label={t.brand}
           onClick={() => setOpen(false)}
         >
-          <BrandMark className="w-[108px] sm:w-[124px]" />
+          <BrandMark variant="mark" width={44} className="w-10 sm:w-11" />
           <span className="sr-only">{t.brand}</span>
         </a>
 
