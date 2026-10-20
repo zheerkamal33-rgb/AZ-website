@@ -24,8 +24,8 @@ export function Hero() {
       <div className="relative z-[1] mx-auto w-full max-w-6xl px-5 pb-20 pt-32 sm:px-8 sm:pb-28">
         <div className="az-hero-enter" aria-label={t.brand}>
           <BrandMark
-            width={460}
-            className="w-64 sm:w-80 md:w-[420px] lg:w-[460px]"
+            width={400}
+            className="w-56 sm:w-72 md:w-[360px] lg:w-[400px]"
           />
         </div>
         <h1 className="az-hero-enter az-hero-enter-delay-1 mt-6 max-w-3xl font-display text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
