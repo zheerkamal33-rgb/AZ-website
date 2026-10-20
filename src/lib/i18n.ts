@@ -112,7 +112,7 @@ export const messages: Record<Lang, Messages> = {
     closeMenu: "Close menu",
     brand: "RozhEx",
 
-    heroHeadline: "CS students who build websites, apps, and systems.",
+    heroHeadline: "CS graduates who build websites, apps, and systems.",
     heroBody:
       "RozhEx is Zheer and Armand. We design and build software for whoever needs it — websites, apps, systems, the whole range. Have a look at some of our work, then say hello.",
     heroCtaWork: "See our work",
@@ -198,13 +198,13 @@ export const messages: Record<Lang, Messages> = {
       "If off-the-shelf tools don't fit, we can build something that does — checkout, ops tools, internal dashboards, whatever the job needs.",
 
     aboutEyebrow: "About",
-    aboutTitle: "Two CS students. Real software.",
+    aboutTitle: "Two CS graduates. Real software.",
     aboutBody:
-      "Zheer and Armand are computer science students who started RozhEx to build software people actually use. We take on websites, apps, and systems for whoever needs them — and we've already put real projects out into the world. Reach us by email; we're the ones doing the work.",
+      "Zheer and Armand are computer science graduates who started RozhEx to build software people actually use. We take on websites, apps, and systems for whoever needs them — and we've already put real projects out into the world. Reach us by email; we're the ones doing the work.",
     aboutZheerRole:
-      "Co-founder, CS student — more on the backend: APIs, data, servers, and making sure things run correctly behind the scenes.",
+      "Co-founder, CS graduate — more on the backend: APIs, data, servers, and making sure things run correctly behind the scenes.",
     aboutArmandRole:
-      "Co-founder, CS student — more on the interface: how the product looks and feels for the people using it.",
+      "Co-founder, CS graduate — more on the interface: how the product looks and feels for the people using it.",
 
     contactEyebrow: "Contact",
     contactTitle: "Say hello.",
@@ -229,7 +229,7 @@ export const messages: Record<Lang, Messages> = {
     formAnother: "Send another message",
 
     footerBlurb:
-      "Zheer & Armand — CS students building websites, apps, and systems.",
+      "Zheer & Armand — CS graduates building websites, apps, and systems.",
     footerCopy: "© 2026 RozhEx. Built by Zheer & Armand.",
   },
 
@@ -243,7 +243,7 @@ export const messages: Record<Lang, Messages> = {
     brand: "RozhEx",
 
     heroHeadline:
-      "خوێندکاری زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
+      "دەرچووی زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
     heroBody:
       "RozhEx بریتییە لە Zheer و Armand. نەرمەکاڵا دیزاین دەکەین و دروست دەکەین بۆ هەر کەسێک کە پێویستی پێیە — وێبسایت، ئەپ، سیستەم، هەموو جۆرێک. چەند کارێکمان ببینە، پاشان سڵاو بڵێ.",
     heroCtaWork: "بینینی کارەکان",
@@ -329,13 +329,13 @@ export const messages: Record<Lang, Messages> = {
       "ئەگەر ئامرازی ئامادەکراو ناگونجێت، دەتوانین شتێک دروست بکەین کە گونجاو بێت — وەرگرتنی پارە، ئامرازی کارەکان، داشبۆردی ناوخۆیی، یان هەر شتێک کە کارەکە پێویستی پێیە.",
 
     aboutEyebrow: "دەربارەمان",
-    aboutTitle: "دوو خوێندکاری زانستی کۆمپیوتەر. نەرمەکاڵای ڕاستەقینە.",
+    aboutTitle: "دوو دەرچووی زانستی کۆمپیوتەر. نەرمەکاڵای ڕاستەقینە.",
     aboutBody:
-      "Zheer و Armand خوێندکاری زانستی کۆمپیوتەرن کە RozhExیان دەستپێکرد بۆ دروستکردنی نەرمەکاڵا کە خەڵک بەڕاستی بەکاری دەهێنن. وێبسایت، ئەپ و سیستەم بۆ هەر کەسێک دروست دەکەین کە پێویستی پێیە — و پێشتر پڕۆژەی ڕاستەقینەمان ناردووەتە دەرەوە. بە ئیمەیڵ پەیوەندیمان پێوە بکە؛ ئێمە خودی کارەکە دەکەین.",
+      "Zheer و Armand دەرچووی زانستی کۆمپیوتەرن کە RozhExیان دەستپێکرد بۆ دروستکردنی نەرمەکاڵا کە خەڵک بەڕاستی بەکاری دەهێنن. وێبسایت، ئەپ و سیستەم بۆ هەر کەسێک دروست دەکەین کە پێویستی پێیە — و پێشتر پڕۆژەی ڕاستەقینەمان ناردووەتە دەرەوە. بە ئیمەیڵ پەیوەندیمان پێوە بکە؛ ئێمە خودی کارەکە دەکەین.",
     aboutZheerRole:
-      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — زیاتر لە لایەنی سێرڤەر و پشتەوە: API، داتا، و دڵنیابوون لەوەی شتەکان ڕاست کار دەکەن.",
+      "هاودامەزرێنەر، دەرچووی زانستی کۆمپیوتەر — زیاتر لە لایەنی سێرڤەر و پشتەوە: API، داتا، و دڵنیابوون لەوەی شتەکان ڕاست کار دەکەن.",
     aboutArmandRole:
-      "هاودامەزرێنەر، خوێندکاری زانستی کۆمپیوتەر — زیاتر لە لایەنی ڕووکار: چۆن بەرهەمەکە دەردەکەوێت و هەستی پێ دەکرێت بۆ بەکارهێنەر.",
+      "هاودامەزرێنەر، دەرچووی زانستی کۆمپیوتەر — زیاتر لە لایەنی ڕووکار: چۆن بەرهەمەکە دەردەکەوێت و هەستی پێ دەکرێت بۆ بەکارهێنەر.",
 
     contactEyebrow: "پەیوەندی",
     contactTitle: "سڵاو بڵێ.",
@@ -360,7 +360,7 @@ export const messages: Record<Lang, Messages> = {
     formAnother: "نامەیەکی تر بنێرە",
 
     footerBlurb:
-      "Zheer و Armand — خوێندکاری زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
+      "Zheer و Armand — دەرچووی زانستی کۆمپیوتەر کە وێبسایت، ئەپ و سیستەم دروست دەکەن.",
     footerCopy: "© 2026 RozhEx. دروستکراوە لەلایەن Zheer و Armand.",
   },
 };

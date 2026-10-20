@@ -26,7 +26,7 @@ const notoArabic = Noto_Sans_Arabic({
 export const metadata: Metadata = {
   title: "RozhEx — Studio of Zheer & Armand",
   description:
-    "RozhEx is Zheer and Armand — CS students who build websites, apps, and systems for anyone. Browse the work and say hello.",
+    "RozhEx is Zheer and Armand — CS graduates who build websites, apps, and systems for anyone. Browse the work and say hello.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
