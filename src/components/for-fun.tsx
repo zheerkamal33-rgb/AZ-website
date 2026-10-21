@@ -12,7 +12,7 @@ export function ForFun() {
   return (
     <section
       id="for-fun"
-      className="az-cv relative overflow-hidden border-y border-slate-line bg-card py-24 sm:py-32"
+      className="az-light az-cv relative overflow-hidden border-y border-slate-line bg-card py-24 sm:py-32"
     >
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">

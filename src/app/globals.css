@@ -99,6 +99,20 @@
   --sidebar-ring: #e7bd62;
 }
 
+.az-light {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #141210;
+  --card: #ffffff;
+  --card-foreground: #141210;
+  --mist: #f7f5ef;
+  --muted-foreground: #625c50;
+  --slate-line: #ded7c8;
+  --border: #ded7c8;
+  --teal-deep: #8c651b;
+  color: var(--foreground);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
