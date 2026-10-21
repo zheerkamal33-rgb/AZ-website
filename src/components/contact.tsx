@@ -4,10 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 import { useLanguage } from "@/components/language-provider";
 import { Reveal } from "@/components/reveal";
 import { SocialLinks } from "@/components/social-links";
-
-const emails = [
-  { name: "RozhEx", email: "rozhex.10@gmail.com" },
-];
+import { ArrowUpRight, Mail } from "lucide-react";
 
 export function Contact() {
   const { t } = useLanguage();
@@ -43,26 +40,19 @@ export function Contact() {
               {t.contactBody}
             </p>
 
-            <ul className="mt-12 space-y-0 divide-y divide-white/10 border-y border-white/10">
-              {emails.map((p) => (
-                <li key={p.email}>
-                  <a
-                    href={`mailto:${p.email}`}
-                    className="az-contact-link group flex flex-col gap-1 py-5 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
-                    dir="ltr"
-                    lang="en"
-                  >
-                    <span className="az-latin shrink-0 text-sm text-white/45 transition-colors group-hover:text-teal">
-                      {p.name}
-                    </span>
-                    <span className="az-latin az-cta font-display text-base font-semibold tracking-tight text-white transition-colors group-hover:text-teal sm:text-lg md:text-xl break-all sm:break-normal sm:text-end">
-                      {p.email}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8">
+            <div className="mt-8 max-w-md space-y-3">
+              <a
+                href="mailto:rozhex.10@gmail.com"
+                className="az-latin group flex min-h-16 items-center gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-3 text-sm font-medium text-white/90 transition duration-200 hover:border-white/25 hover:bg-white/[0.08] hover:shadow-lg hover:shadow-black/10 motion-safe:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                dir="ltr"
+                lang="en"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal text-ink shadow-sm">
+                  <Mail className="h-[18px] w-[18px]" aria-hidden="true" />
+                </span>
+                <span className="min-w-0 break-all">rozhex.10@gmail.com</span>
+                <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 opacity-35 transition-opacity group-hover:opacity-100" aria-hidden="true" />
+              </a>
               <SocialLinks dark />
             </div>
           </Reveal>
