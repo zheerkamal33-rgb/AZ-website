@@ -23,9 +23,9 @@ export function UniBuild() {
           </h2>
         </Reveal>
 
-        <Reveal delayMs={100} className="relative isolate mt-28 sm:mt-36 lg:mt-12">
+        <Reveal delayMs={100} className="relative isolate mt-28 sm:mt-40">
           <figure
-            className="az-float-slow pointer-events-none absolute right-40 -top-16 z-0 w-40 rotate-[-6deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:right-64 sm:-top-24 sm:w-56 lg:right-72 lg:-top-28 lg:w-64"
+            className="az-float-slow pointer-events-none absolute end-40 -top-16 z-0 w-40 rotate-[-6deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:end-64 sm:-top-24 sm:w-56 lg:end-72 lg:-top-28 lg:w-64"
             aria-hidden="true"
           >
             <Image
@@ -39,7 +39,7 @@ export function UniBuild() {
             />
           </figure>
           <figure
-            className="az-float-slow pointer-events-none absolute right-2 -top-20 z-0 w-40 rotate-[7deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:right-4 sm:-top-28 sm:w-64 lg:right-8 lg:-top-32 lg:w-72"
+            className="az-float-slow pointer-events-none absolute end-2 -top-20 z-0 w-40 rotate-[7deg] overflow-hidden rounded-2xl border border-violet-300/30 bg-[#0a1326] opacity-90 shadow-[0_30px_70px_-22px_rgba(91,33,182,0.75)] sm:end-4 sm:-top-28 sm:w-64 lg:end-8 lg:-top-32 lg:w-72"
             aria-hidden="true"
           >
             <Image
@@ -53,7 +53,7 @@ export function UniBuild() {
             />
           </figure>
           <article className="relative z-10 grid overflow-hidden rounded-2xl border border-slate-line bg-white p-6 shadow-sm sm:p-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
-            <div className="relative z-10 lg:pr-4">
+            <div className="relative z-10 lg:pe-4">
               <Fingerprint className="h-10 w-10 text-teal-deep" aria-hidden="true" />
               <h3 className="mt-5 font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
                 {t.attendanceName}
@@ -69,7 +69,7 @@ export function UniBuild() {
                 ))}
               </div>
             </div>
-            <div className="relative z-10 mt-8 rounded-xl border border-slate-line bg-mist/95 p-6 shadow-sm backdrop-blur-sm lg:mt-0 lg:mr-16">
+            <div className="relative z-10 mt-8 rounded-xl border border-slate-line bg-mist/95 p-6 shadow-sm backdrop-blur-sm lg:mt-0 lg:me-16">
               <ul className="space-y-4">
                 {t.attendanceFeatures.map((feature, index) => {
                   const Icon = index === 3 ? Sparkles : Check;
