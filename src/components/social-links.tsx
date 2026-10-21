@@ -21,10 +21,10 @@ function Facebook(props: SVGProps<SVGSVGElement>) {
 }
 
 const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/rozhex__/", icon: Instagram, color: "bg-gradient-to-br from-violet-500 via-pink-500 to-orange-400" },
-  { name: "TikTok", href: "https://www.tiktok.com/@rozhex_", icon: Music2, color: "bg-slate-900 ring-1 ring-cyan-400/40" },
-  { name: "Facebook", href: "https://www.facebook.com/share/1R2Y142t5W/", icon: Facebook, color: "bg-blue-600" },
-  { name: "WhatsApp", href: "https://wa.me/9647741197770", icon: MessageCircle, color: "bg-emerald-600" },
+  { name: "Instagram", href: "https://www.instagram.com/rozhex__/", icon: Instagram, color: "bg-teal/15 ring-1 ring-teal/30" },
+  { name: "TikTok", href: "https://www.tiktok.com/@rozhex_", icon: Music2, color: "bg-teal/15 ring-1 ring-teal/30" },
+  { name: "Facebook", href: "https://www.facebook.com/share/1R2Y142t5W/", icon: Facebook, color: "bg-teal/15 ring-1 ring-teal/30" },
+  { name: "WhatsApp", href: "https://wa.me/9647741197770", icon: MessageCircle, color: "bg-teal/15 ring-1 ring-teal/30" },
 ];
 
 export function SocialLinks({ dark = false }: { dark?: boolean }) {
@@ -40,11 +40,11 @@ export function SocialLinks({ dark = false }: { dark?: boolean }) {
             className={cn(
               "group flex min-h-16 items-center gap-3 rounded-xl border p-3 text-sm font-medium transition duration-200 motion-safe:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2",
               dark
-                ? "border-white/10 bg-white/[0.04] text-white/90 hover:border-white/25 hover:bg-white/[0.08] hover:shadow-lg hover:shadow-black/10 focus-visible:ring-offset-ink"
-                : "border-slate-line bg-white text-ink/80 shadow-sm hover:border-ink/20 hover:bg-mist hover:shadow-md focus-visible:ring-offset-white",
+                ? "border-white/10 bg-white/[0.04] text-white/90 hover:border-teal/40 hover:bg-teal/[0.08] hover:shadow-lg hover:shadow-black/10 focus-visible:ring-offset-ink"
+                : "border-slate-line bg-card text-foreground/80 shadow-sm hover:border-ink/20 hover:bg-mist hover:shadow-md focus-visible:ring-offset-card",
             )}
           >
-            <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-white shadow-sm", color)}>
+            <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-teal shadow-sm", color)}>
               <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
             </span>
             <span>{name}</span>

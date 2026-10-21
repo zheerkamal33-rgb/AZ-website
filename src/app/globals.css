@@ -56,46 +56,47 @@
 }
 
 :root {
-  /* RozhEx — deep ink + electric teal */
-  --ink: #0b1420;
-  --ink-soft: #1a2740;
-  --mist: #f3f6f9;
-  --teal: #1ad4c0;
-  --teal-deep: #0ea894;
-  --slate-line: #c8d2de;
+  /* RozhEx — black + warm gold */
+  color-scheme: dark;
+  --ink: #090909;
+  --ink-soft: #1c1912;
+  --mist: #111110;
+  --teal: #e7bd62;
+  --teal-deep: #d5a846;
+  --slate-line: #383126;
 
-  --background: #f3f6f9;
-  --foreground: #0b1420;
-  --card: #ffffff;
-  --card-foreground: #0b1420;
-  --popover: #ffffff;
-  --popover-foreground: #0b1420;
-  --primary: #0b1420;
-  --primary-foreground: #f3f6f9;
-  --secondary: #e6ecf2;
-  --secondary-foreground: #0b1420;
-  --muted: #e6ecf2;
-  --muted-foreground: #5a6b7d;
-  --accent: #1ad4c0;
-  --accent-foreground: #0b1420;
+  --background: #111110;
+  --foreground: #f5f0e6;
+  --card: #181715;
+  --card-foreground: #f5f0e6;
+  --popover: #181715;
+  --popover-foreground: #f5f0e6;
+  --primary: #e7bd62;
+  --primary-foreground: #090909;
+  --secondary: #24211b;
+  --secondary-foreground: #f5f0e6;
+  --muted: #24211b;
+  --muted-foreground: #b5aea0;
+  --accent: #e7bd62;
+  --accent-foreground: #090909;
   --destructive: oklch(0.55 0.2 25);
-  --border: #c8d2de;
-  --input: #c8d2de;
-  --ring: #1ad4c0;
-  --chart-1: #1ad4c0;
-  --chart-2: #1a2740;
-  --chart-3: #5a6b7d;
-  --chart-4: #0ea894;
-  --chart-5: #0b1420;
+  --border: #383126;
+  --input: #383126;
+  --ring: #e7bd62;
+  --chart-1: #e7bd62;
+  --chart-2: #1c1912;
+  --chart-3: #b5aea0;
+  --chart-4: #d5a846;
+  --chart-5: #090909;
   --radius: 0.5rem;
-  --sidebar: #f3f6f9;
-  --sidebar-foreground: #0b1420;
-  --sidebar-primary: #0b1420;
-  --sidebar-primary-foreground: #f3f6f9;
-  --sidebar-accent: #e6ecf2;
-  --sidebar-accent-foreground: #0b1420;
-  --sidebar-border: #c8d2de;
-  --sidebar-ring: #1ad4c0;
+  --sidebar: #111110;
+  --sidebar-foreground: #f5f0e6;
+  --sidebar-primary: #e7bd62;
+  --sidebar-primary-foreground: #090909;
+  --sidebar-accent: #24211b;
+  --sidebar-accent-foreground: #f5f0e6;
+  --sidebar-border: #383126;
+  --sidebar-ring: #e7bd62;
 }
 
 @layer base {
@@ -266,8 +267,8 @@ header.az-menu-open .az-burger-3 {
   .az-hero-wash {
     background:
       radial-gradient(ellipse 80% 60% at 70% 40%, color-mix(in srgb, var(--teal) 28%, transparent), transparent 55%),
-      radial-gradient(ellipse 50% 40% at 15% 80%, color-mix(in srgb, #3b82a0 35%, transparent), transparent 50%),
-      linear-gradient(165deg, var(--ink) 0%, var(--ink-soft) 55%, #0e1c2e 100%);
+      radial-gradient(ellipse 50% 40% at 15% 80%, color-mix(in srgb, #b78a35 35%, transparent), transparent 50%),
+      linear-gradient(165deg, var(--ink) 0%, var(--ink-soft) 55%, #0c0b09 100%);
   }
 
   /* Always visible — never hide Work/content behind IntersectionObserver */
@@ -303,8 +304,8 @@ header.az-menu-open .az-burger-3 {
   /* Contact — underline fields + email row motion */
   .az-contact-form input:-webkit-autofill,
   .az-contact-form textarea:-webkit-autofill {
-    -webkit-text-fill-color: #f3f6f9;
-    box-shadow: 0 0 0 1000px #0b1420 inset;
+    -webkit-text-fill-color: #f5f0e6;
+    box-shadow: 0 0 0 1000px #090909 inset;
     transition: background-color 9999s ease-out;
   }
 

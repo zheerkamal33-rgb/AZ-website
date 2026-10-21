@@ -23,7 +23,7 @@ export function Contact() {
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#3b82a0]/15 blur-3xl"
+        className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#b78a35]/15 blur-3xl"
         aria-hidden="true"
       />
 

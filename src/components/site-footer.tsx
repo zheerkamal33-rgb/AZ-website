@@ -7,7 +7,7 @@ export function SiteFooter() {
   const { t } = useLanguage();
 
   return (
-    <footer className="az-cv border-t border-slate-line bg-white text-ink">
+    <footer className="az-cv border-t border-slate-line bg-card text-foreground">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-end sm:justify-between sm:px-8">
         <div className="w-full sm:max-w-md">
           <p className="max-w-sm text-sm text-muted-foreground">
@@ -21,7 +21,7 @@ export function SiteFooter() {
         >
           <a
             href="mailto:rozhex.10@gmail.com"
-            className="az-latin text-ink/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
+            className="az-latin text-foreground/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
           >
             rozhex.10@gmail.com
           </a>

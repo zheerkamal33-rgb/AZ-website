@@ -19,7 +19,7 @@ export function PhoneFrame({
         className
       )}
     >
-      <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#0a0e14] p-[0.35rem] shadow-[0_28px_60px_-20px_rgba(0,0,0,0.65)] ring-1 ring-black/40 sm:rounded-[2.35rem] sm:p-[0.4rem]">
+      <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#101010] p-[0.35rem] shadow-[0_28px_60px_-20px_rgba(0,0,0,0.65)] ring-1 ring-black/40 sm:rounded-[2.35rem] sm:p-[0.4rem]">
         <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center pt-2 sm:pt-2.5">
           <div className="h-4 w-[28%] rounded-full bg-black sm:h-5" />
         </div>
@@ -89,14 +89,14 @@ export function MonitorFrame({
 }) {
   return (
     <div className={cn("relative w-full", className)}>
-      <div className="overflow-hidden rounded-md border border-[#2a4a55]/80 bg-[#071018] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.85)] ring-1 ring-[#7ec8c4]/25">
-        <div className="flex items-center gap-3 border-b border-[#1e3348] bg-[#0b1520] px-3 py-2">
-          <div className="h-2 w-2 rounded-sm bg-[#7ec8c4]/80" />
-          <div className="flex-1 truncate font-mono text-[10px] tracking-wide text-[#8aa0b5] sm:text-xs">
+      <div className="overflow-hidden rounded-md border border-[#54472c]/80 bg-[#0c0b09] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.85)] ring-1 ring-[#e7bd62]/25">
+        <div className="flex items-center gap-3 border-b border-[#383126] bg-[#15130f] px-3 py-2">
+          <div className="h-2 w-2 rounded-sm bg-[#e7bd62]/80" />
+          <div className="flex-1 truncate font-mono text-[10px] tracking-wide text-[#b5aea0] sm:text-xs">
             {label}
           </div>
         </div>
-        <div className="relative aspect-[16/10] bg-[#0b1520]">
+        <div className="relative aspect-[16/10] bg-[#15130f]">
           <Image
             src={src}
             alt={alt}
@@ -109,8 +109,8 @@ export function MonitorFrame({
           />
         </div>
       </div>
-      <div className="mx-auto h-3 w-[18%] bg-gradient-to-b from-[#1a2a35] to-[#0a1218]" />
-      <div className="mx-auto h-1.5 w-[42%] rounded-b-md bg-[#0a1218]" />
+      <div className="mx-auto h-3 w-[18%] bg-gradient-to-b from-[#29251c] to-[#100f0c]" />
+      <div className="mx-auto h-1.5 w-[42%] rounded-b-md bg-[#100f0c]" />
     </div>
   );
 }
@@ -137,9 +137,9 @@ export function BarcodeScanner({ className }: { className?: string }) {
             y2="240"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#3a4452" />
-            <stop offset="0.45" stopColor="#1c2430" />
-            <stop offset="1" stopColor="#0e131a" />
+            <stop stopColor="#45433e" />
+            <stop offset="0.45" stopColor="#25231f" />
+            <stop offset="1" stopColor="#141310" />
           </linearGradient>
           <linearGradient
             id="sc-grip"
@@ -149,8 +149,8 @@ export function BarcodeScanner({ className }: { className?: string }) {
             y2="270"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#2a3340" />
-            <stop offset="1" stopColor="#121820" />
+            <stop stopColor="#35322b" />
+            <stop offset="1" stopColor="#1a1916" />
           </linearGradient>
           <linearGradient
             id="sc-nose"
@@ -160,8 +160,8 @@ export function BarcodeScanner({ className }: { className?: string }) {
             y2="100"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#4a5565" />
-            <stop offset="1" stopColor="#1a222e" />
+            <stop stopColor="#5b574e" />
+            <stop offset="1" stopColor="#25221c" />
           </linearGradient>
           <radialGradient id="sc-laser" cx="0.5" cy="0.5" r="0.5">
             <stop stopColor="#ff4d4d" stopOpacity="0.95" />
@@ -177,13 +177,13 @@ export function BarcodeScanner({ className }: { className?: string }) {
         />
         <path
           d="M118 248 C118 268 95 275 72 268 C48 260 38 278 28 272"
-          stroke="#2a3340"
+          stroke="#35322b"
           strokeWidth="2.2"
           strokeLinecap="round"
           fill="none"
         />
         <rect x="18" y="266" width="18" height="10" rx="2" fill="#8a94a3" />
-        <rect x="20" y="268" width="10" height="6" rx="1" fill="#1a222e" />
+        <rect x="20" y="268" width="10" height="6" rx="1" fill="#25221c" />
         <path
           d="M48 58 C42 42 52 28 78 24 L148 18 C168 16 182 28 178 48 L168 92 C164 108 148 118 128 120 L72 126 C54 128 46 110 48 92 Z"
           fill="url(#sc-nose)"
@@ -194,7 +194,7 @@ export function BarcodeScanner({ className }: { className?: string }) {
           width="88"
           height="36"
           rx="6"
-          fill="#0a0e14"
+          fill="#101010"
           stroke="#5a6575"
           strokeWidth="2"
         />
@@ -231,7 +231,7 @@ export function BarcodeScanner({ className }: { className?: string }) {
         />
         <path
           d="M108 168 C108 168 118 172 124 186 C128 196 122 206 112 208 C102 210 96 200 98 190 C100 180 104 172 108 168 Z"
-          fill="#0ea894"
+          fill="#d5a846"
         />
         <path
           d="M96 188 C92 186 90 190 92 200 L108 262 C110 270 122 272 130 266 L148 248 C154 242 152 232 146 228 L118 196 C112 190 102 190 96 188 Z"
@@ -239,21 +239,21 @@ export function BarcodeScanner({ className }: { className?: string }) {
         />
         <path
           d="M112 210 L132 224"
-          stroke="#4a5565"
+          stroke="#5b574e"
           strokeWidth="2"
           strokeLinecap="round"
           opacity="0.5"
         />
         <path
           d="M116 222 L136 236"
-          stroke="#4a5565"
+          stroke="#5b574e"
           strokeWidth="2"
           strokeLinecap="round"
           opacity="0.45"
         />
         <path
           d="M120 234 L138 246"
-          stroke="#4a5565"
+          stroke="#5b574e"
           strokeWidth="2"
           strokeLinecap="round"
           opacity="0.4"
@@ -264,14 +264,14 @@ export function BarcodeScanner({ className }: { className?: string }) {
           width="48"
           height="18"
           rx="3"
-          fill="#0b1420"
+          fill="#090909"
           opacity="0.7"
         />
         <text
           x="116"
           y="140"
           textAnchor="middle"
-          fill="#1ad4c0"
+          fill="#e7bd62"
           fontFamily="ui-sans-serif, system-ui, sans-serif"
           fontSize="8"
           fontWeight="700"
@@ -299,8 +299,8 @@ export function LaptopFrame({
 }) {
   return (
     <div className={cn("az-laptop relative w-full max-w-3xl", className)}>
-      <div className="overflow-hidden rounded-xl border border-white/12 bg-[#121820] shadow-[0_36px_80px_-28px_rgba(0,0,0,0.7)] ring-1 ring-black/30">
-        <div className="flex items-center gap-2 border-b border-white/8 bg-[#1a222e] px-3 py-2.5 sm:px-4">
+      <div className="overflow-hidden rounded-xl border border-white/12 bg-[#1a1916] shadow-[0_36px_80px_-28px_rgba(0,0,0,0.7)] ring-1 ring-black/30">
+        <div className="flex items-center gap-2 border-b border-white/8 bg-[#25221c] px-3 py-2.5 sm:px-4">
           <span className="size-2 rounded-full bg-[#ff5f57] sm:size-2.5" />
           <span className="size-2 rounded-full bg-[#febc2e] sm:size-2.5" />
           <span className="size-2 rounded-full bg-[#28c840] sm:size-2.5" />
@@ -321,8 +321,8 @@ export function LaptopFrame({
           />
         </div>
       </div>
-      <div className="mx-auto h-2 w-[92%] rounded-b-md bg-gradient-to-b from-[#2a3340] to-[#151a22] shadow-md" />
-      <div className="mx-auto h-1.5 w-[62%] rounded-b-lg bg-[#0d1118]" />
+      <div className="mx-auto h-2 w-[92%] rounded-b-md bg-gradient-to-b from-[#35322b] to-[#1d1b16] shadow-md" />
+      <div className="mx-auto h-1.5 w-[62%] rounded-b-lg bg-[#11100d]" />
     </div>
   );
 }
