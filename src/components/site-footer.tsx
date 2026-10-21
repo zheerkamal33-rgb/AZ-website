@@ -3,6 +3,7 @@
 import { BrandMark } from "@/components/brand-mark";
 import { useLanguage } from "@/components/language-provider";
 import { LatinText } from "@/components/latin-text";
+import { SocialLinks } from "@/components/social-links";
 
 export function SiteFooter() {
   const { t } = useLanguage();
@@ -18,6 +19,9 @@ export function SiteFooter() {
           <p className="mt-2 max-w-sm text-sm text-muted-foreground">
             <LatinText text={t.footerBlurb} />
           </p>
+          <div className="mt-5">
+            <SocialLinks />
+          </div>
         </div>
         <div
           className="az-latin flex flex-col gap-2 text-sm sm:items-end"

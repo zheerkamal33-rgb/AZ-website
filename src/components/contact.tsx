@@ -3,6 +3,7 @@
 import { ContactForm } from "@/components/contact-form";
 import { useLanguage } from "@/components/language-provider";
 import { Reveal } from "@/components/reveal";
+import { SocialLinks } from "@/components/social-links";
 
 const emails = [
   { name: "Zheer", email: "zheerkamal33@gmail.com" },
@@ -62,6 +63,9 @@ export function Contact() {
                 </li>
               ))}
             </ul>
+            <div className="mt-8">
+              <SocialLinks dark />
+            </div>
           </Reveal>
 
           <Reveal delayMs={100}>
