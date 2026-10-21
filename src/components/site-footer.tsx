@@ -2,7 +2,6 @@
 
 import { useLanguage } from "@/components/language-provider";
 import { LatinText } from "@/components/latin-text";
-import { SocialLinks } from "@/components/social-links";
 
 export function SiteFooter() {
   const { t } = useLanguage();
@@ -14,9 +13,6 @@ export function SiteFooter() {
           <p className="max-w-sm text-sm text-muted-foreground">
             <LatinText text={t.footerBlurb} />
           </p>
-          <div className="mt-5">
-            <SocialLinks />
-          </div>
         </div>
         <div
           className="az-latin flex flex-col gap-2 text-sm sm:items-end"
@@ -24,16 +20,10 @@ export function SiteFooter() {
           lang="en"
         >
           <a
-            href="mailto:zheerkamal33@gmail.com"
+            href="mailto:rozhex.10@gmail.com"
             className="az-latin text-ink/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
           >
-            Zheer — zheerkamal33@gmail.com
-          </a>
-          <a
-            href="mailto:armandsoran820@gmail.com"
-            className="az-latin text-ink/70 transition-colors hover:text-teal-deep break-all sm:break-normal"
-          >
-            Armand — armandsoran820@gmail.com
+            rozhex.10@gmail.com
           </a>
         </div>
       </div>

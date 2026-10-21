@@ -209,7 +209,7 @@ export const messages: Record<Lang, Messages> = {
     contactEyebrow: "Contact",
     contactTitle: "Say hello.",
     contactBody:
-      "Email either of us, or send a short note with the form. We read everything ourselves.",
+      "Email our team, or send a short note with the form. We read everything ourselves.",
     formName: "Name",
     formEmail: "Email",
     formMessage: "Message",
@@ -225,7 +225,7 @@ export const messages: Record<Lang, Messages> = {
       "Could not send the message. Please try again or email us directly.",
     formSuccessTitle: "Thanks — we got it.",
     formSuccessBody:
-      "Zheer or Armand will follow up shortly. You can also email either of us using the addresses on this page.",
+      "Zheer or Armand will follow up shortly. You can also email our team using the address on this page.",
     formAnother: "Send another message",
 
     footerBlurb:
@@ -340,7 +340,7 @@ export const messages: Record<Lang, Messages> = {
     contactEyebrow: "پەیوەندی",
     contactTitle: "سڵاو بڵێ.",
     contactBody:
-      "ئیمەیڵ بۆ هەر یەکێکمان بنێرە، یان نامەیەکی کورت لە ڕێگەی فۆرمەکەوە بنێرە. هەموو شتێک خۆمان دەیخوێنینەوە.",
+      "ئیمەیڵ بۆ تیمەکەمان بنێرە، یان نامەیەکی کورت لە ڕێگەی فۆرمەکەوە بنێرە. هەموو شتێک خۆمان دەیخوێنینەوە.",
     formName: "ناو",
     formEmail: "ئیمەیڵ",
     formMessage: "نامە",
@@ -356,7 +356,7 @@ export const messages: Record<Lang, Messages> = {
       "نەتوانرا نامەکە بنێردرێت. دووبارە هەوڵبدەرەوە یان ڕاستەوخۆ ئیمەیڵمان بۆ بنێرە.",
     formSuccessTitle: "سوپاس — وەرمانگرت.",
     formSuccessBody:
-      "Zheer یان Armand بەم زووانە وەڵامت دەدەنەوە. دەتوانیت ڕاستەوخۆش ئیمەیڵ بۆ یەکێکمان بنێرە لەم پەڕەیە.",
+      "Zheer یان Armand بەم زووانە وەڵامت دەدەنەوە. دەتوانیت ڕاستەوخۆش ئیمەیڵ بۆ تیمەکەمان بنێریت بە ناونیشانی ئیمەیڵی ئەم پەڕەیە.",
     formAnother: "نامەیەکی تر بنێرە",
 
     footerBlurb:

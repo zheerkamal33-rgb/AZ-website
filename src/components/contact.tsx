@@ -6,8 +6,7 @@ import { Reveal } from "@/components/reveal";
 import { SocialLinks } from "@/components/social-links";
 
 const emails = [
-  { name: "Zheer", email: "zheerkamal33@gmail.com" },
-  { name: "Armand", email: "armandsoran820@gmail.com" },
+  { name: "RozhEx", email: "rozhex.10@gmail.com" },
 ];
 
 export function Contact() {
