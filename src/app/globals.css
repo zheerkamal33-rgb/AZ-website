@@ -100,17 +100,42 @@
 }
 
 .az-section-blend {
-  height: clamp(6rem, 12vw, 11rem);
+  position: relative;
+  height: clamp(9rem, 16vw, 15rem);
   flex-shrink: 0;
   pointer-events: none;
+  background: linear-gradient(to bottom,
+    var(--blend-from) 0%,
+    color-mix(in srgb, var(--blend-from) 98%, var(--blend-to)) 10%,
+    color-mix(in srgb, var(--blend-from) 92%, var(--blend-to)) 20%,
+    color-mix(in srgb, var(--blend-from) 82%, var(--blend-to)) 30%,
+    color-mix(in srgb, var(--blend-from) 68%, var(--blend-to)) 40%,
+    color-mix(in srgb, var(--blend-from) 50%, var(--blend-to)) 50%,
+    color-mix(in srgb, var(--blend-from) 32%, var(--blend-to)) 60%,
+    color-mix(in srgb, var(--blend-from) 18%, var(--blend-to)) 70%,
+    color-mix(in srgb, var(--blend-from) 8%, var(--blend-to)) 80%,
+    color-mix(in srgb, var(--blend-from) 2%, var(--blend-to)) 90%,
+    var(--blend-to) 100%);
+}
+
+/* Fine dithering breaks up visible color bands on lower-depth displays. */
+.az-section-blend::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23888' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
 }
 
 .az-blend-to-white {
-  background: linear-gradient(to bottom, #090909 0%, #292720 22%, #8c877b 54%, #e9e5dc 80%, #ffffff 100%);
+  --blend-from: #090909;
+  --blend-to: #ffffff;
 }
 
 .az-blend-to-black {
-  background: linear-gradient(to bottom, #f7f5ef 0%, #e9e5dc 20%, #8c877b 46%, #292720 78%, #090909 100%);
+  --blend-from: #f7f5ef;
+  --blend-to: #090909;
 }
 
 .az-light {
