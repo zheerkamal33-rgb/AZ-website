@@ -13,7 +13,7 @@ export function Capabilities() {
   ];
 
   return (
-    <section className="az-light az-cv border-y border-slate-line bg-card py-24 sm:py-32">
+    <section className="az-light az-cv border-b border-slate-line bg-card py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <p className="text-sm font-medium tracking-wide text-teal-deep uppercase">

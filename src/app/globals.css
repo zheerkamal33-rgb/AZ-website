@@ -99,6 +99,20 @@
   --sidebar-ring: #e7bd62;
 }
 
+.az-section-blend {
+  height: clamp(6rem, 12vw, 11rem);
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.az-blend-to-white {
+  background: linear-gradient(to bottom, #090909 0%, #292720 22%, #8c877b 54%, #e9e5dc 80%, #ffffff 100%);
+}
+
+.az-blend-to-black {
+  background: linear-gradient(to bottom, #f7f5ef 0%, #e9e5dc 20%, #8c877b 46%, #292720 78%, #090909 100%);
+}
+
 .az-light {
   color-scheme: light;
   --background: #ffffff;

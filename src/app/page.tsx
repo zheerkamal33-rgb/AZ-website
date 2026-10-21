@@ -15,12 +15,15 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <SelectedWork />
+        <div className="az-section-blend az-blend-to-white" aria-hidden="true" />
         <Capabilities />
         <ForFun />
         <UniBuild />
         <About />
+        <div className="az-section-blend az-blend-to-black" aria-hidden="true" />
         <Contact />
       </main>
+      <div className="az-section-blend az-blend-to-white" aria-hidden="true" />
       <SiteFooter />
     </>
   );
